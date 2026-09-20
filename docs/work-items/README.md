@@ -61,6 +61,10 @@ first slice teaches. Itemise them after the slice is on the phone.
   neume a glossary entry linked from scores. The first slice only has a tile.
 - **Hymn tiers 1–3 beyond Holy Holy Holy** — each hymn a repeat of 06 + 07 + operator picks;
   tier 1 (Liturgy fixed hymns) first.
+- **A terms glossary** — plain-language entries for moria, tetrachord, genus, attraction, ison,
+  apechema, parallage, reachable from wherever the term appears; the neume glossary from the
+  destination probably lives with it. Asked for by the operator on 2026-09-20; where it lives
+  and how entries are keyed is item 07's call or a small item after it.
 - **The *learn* tab** (open decision 4) and **progress export/import** (open decision 7).
 - **Interactive `.byz` scores**, **hosted audio**, **record-and-compare** — stated boundaries;
   the hymn schema's `byz: null` slot and the tuner's `NoteSequence` target are the only

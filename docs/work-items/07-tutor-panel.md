@@ -8,6 +8,13 @@ with author, work and link — required for anything historical or narrative. Th
 in the data (separate types, not a flag on one type). Holy Holy Holy carries at least one
 *source*; Pl. 4 carries the theory-text citation from item 04 as a *source*.
 
+**Wanted, placement open (operator, 2026-09-20):** the harder terms — moria, tetrachord, genus,
+attraction (ἕλξις), ison, apechema, parallage — need a plain-language explanation somewhere the
+learner can reach from any page that uses the term. Whether that is a third tutor kind
+(*term*), a glossary page that the neume glossary later joins, or inline hints is undecided;
+decide it in this item or spin it out, but do not silently leave it out. The Pl. 4 `notes` in
+`src/theory/modes.ts` show the register wanted: concrete, short, no assumed background.
+
 ## Acceptance criteria
 
 - On the hymn page the source quotation shows author, work and a link that resolves; it is
