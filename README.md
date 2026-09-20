@@ -60,6 +60,12 @@ TypeScript + Vite, with the smallest additions that give routing and components:
 No backend, no accounts, no analytics, no paid services. Progress will live in the browser
 (IndexedDB) when there is progress to keep.
 
+## Known limitations
+
+- **iPhone: the ring/silent switch mutes the scale.** Safari keeps Web Audio under the switch;
+  the silent-media trick in `src/audio/synth.ts` did not lift it on the operator's phone.
+  Turn the ringer on to practise. Only a native app could change this.
+
 ## Layout
 
 - `src/` — the app. `pages/` holds one file per route. `theory/` is the interval system

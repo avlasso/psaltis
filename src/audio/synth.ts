@@ -11,9 +11,13 @@ export function upAndDown(stepCount: number): number[] {
 }
 
 /**
- * A silent WAV. iOS keeps Web Audio under the ring/silent switch until the page has played
- * media; playing this once on the first tap moves the page to the media category, after
- * which the oscillators sound with the switch on silent, like any other media.
+ * A silent WAV, played once on the first tap to ask iOS to treat the page as media so the
+ * oscillators sound under the ring/silent switch. Known limitation: on the operator's
+ * iPhone (Safari, 2026-09) this did not suffice — the switch still mutes the synth and the
+ * ringer must be on to hear the ladder. Kept because it is harmless and helps on some
+ * versions; the next thing to try, if it is ever worth it, is routing the synth through an
+ * <audio> element via a MediaStreamDestination. A home-screen PWA would not change this;
+ * only a native app can set the playback audio session.
  */
 const SILENT_WAV = 'data:audio/wav;base64,UklGRiwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQgAAAAAAAAAAAAAAA==';
 
