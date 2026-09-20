@@ -25,6 +25,12 @@ describe('App routing under the Pages base path', () => {
     expect(screen.getByRole('heading', { level: 1, name: 'Scales' })).toBeDefined();
   });
 
+  it('serves the lab page, which Home does not link to', () => {
+    renderAt('/psaltis/lab/tuner');
+    expect(screen.getByRole('heading', { level: 1, name: 'Lab · tuner' })).toBeDefined();
+    expect(screen.getByRole('button', { name: 'Start mic' })).toBeDefined();
+  });
+
   it('falls back to Not found for unknown routes', () => {
     renderAt('/psaltis/nope');
     expect(screen.getByRole('heading', { level: 1, name: 'Not found' })).toBeDefined();

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "lucide-preact": "^1.47.0",
+    "pitchy": "^4.1.0",
     "preact": "^10.29.8",
     "preact-iso": "^2.12.2"
   },

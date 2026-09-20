@@ -214,6 +214,7 @@ a.mode:focus-visible {
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin: 0.5rem 0 1.25rem;
 }
@@ -382,4 +383,123 @@ a.mode:focus-visible {
 
 .source__cite a {
   color: var(--accent);
+}
+
+/* Lab · tuner — a bench, not a learner page; functional only. */
+.lab__trace {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  margin: 1rem 0;
+  background: var(--tile);
+  border: 1px solid var(--tile-border);
+  border-radius: 0.5rem;
+}
+
+.lab__cards {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.lab__card {
+  background: var(--tile);
+  border: 1px solid var(--tile-border);
+  border-left-width: 4px;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.lab__card--muted .lab__hz {
+  opacity: 0.4;
+}
+
+.lab__card h2 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.lab__hz {
+  font-size: 2rem;
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.lab__hz small {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.lab__cents {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: var(--muted);
+}
+
+.lab__stats {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.15rem 0.75rem;
+  margin: 0;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab__stats dt {
+  color: var(--muted);
+}
+
+.lab__stats dd {
+  margin: 0;
+}
+
+.lab__settings {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.lab__field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.lab__field input[type='number'] {
+  width: 6rem;
+  font: inherit;
+  padding: 0.3rem 0.4rem;
+}
+
+.lab__field--wide {
+  flex: 1 1 12rem;
+}
+
+.lab__field--wide input {
+  flex: 1;
+}
+
+.lab__system {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--tile);
+  border: 1px solid var(--tile-border);
+  border-radius: 0.5rem;
+}
+
+.lab__error {
+  color: #b03a2e;
+}
+
+.lab__how {
+  margin-top: 1.5rem;
+}
+
+.lab__how h2 {
+  font-size: 1rem;
+}
+
+.lab__how li {
+  margin-bottom: 0.4rem;
 }

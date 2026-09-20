@@ -55,10 +55,21 @@ TypeScript + Vite, with the smallest additions that give routing and components:
   including `public/favicon.svg`, comes from it; the app generates no images. ISC (like MIT)
   asks that the copyright notice travel with the code; the minified bundle drops it, so the
   notices for Lucide, Preact and preact-iso ship as `public/licenses.txt`.
+- **[pitchy](https://github.com/ianprime0509/pitchy)** (MIT) — the McLeod pitch method, one of
+  the three detector candidates; ~3 kB.
 - **[Vitest](https://vitest.dev/)** with jsdom — tests live next to the code as `*.test.tsx`.
 
 No backend, no accounts, no analytics, no paid services. Progress will live in the browser
 (IndexedDB) when there is progress to keep.
+
+## Lab
+
+`/psaltis/lab/tuner` is not linked from Home. It runs the three candidate pitch detectors
+(McLeod via `pitchy`, YIN, autocorrelation — `src/audio/detectors/`) side by side on the live
+microphone and shows Hz, clarity, one-second jitter and octave flips for each, plus a reference
+tone from the synth. It chose the detector behind `src/audio/detect-pitch.ts`
+(`docs/decisions/pitch-detector.md`) and stays as the place to look when the tuner misbehaves.
+The mic needs HTTPS, so use the Pages URL or `localhost`.
 
 ## Known limitations
 
@@ -71,12 +82,14 @@ No backend, no accounts, no analytics, no paid services. Progress will live in t
 - `src/` — the app. `pages/` holds one file per route. `theory/` is the interval system
   (`moria.ts`: 72 moria, the Committee genera; `modes.ts`: the eight modes as reviewable data
   with the text each claim is cited to; `pitch.ts`: the movable base note). `audio/` is the
-  Web Audio synth; `components/ladder.tsx` is the ladder that *play*, *tune* and practice share.
+  Web Audio synth, the microphone (`mic.ts`) and pitch detection (`detect-pitch.ts` is the one
+  the app calls; `detectors/` holds the candidates the lab compares); `components/ladder.tsx`
+  is the ladder that *play*, *tune* and practice share.
 - `catalogue/` — content (hymns, modes, rundowns); see [`catalogue/README.md`](catalogue/README.md).
   Adding a hymn or swapping a video is a file edit here; no code changes for content.
 - `psaltis/`, `tests/`, `pyproject.toml` — the Python content tools, below. Nothing in the app
   imports them; `npm run build` never touches Python.
-- `docs/` — destination and work items.
+- `docs/` — destination, work items, and `decisions/` for choices made by measurement.
 
 ## Content tools (Python)
 
