@@ -1,0 +1,136 @@
+{
+  "id": "he.a.m1.heAU.TouLithouSfragisthentos",
+  "kind": "hymn",
+  "title_gr": "Τοῦ λίθου σφραγισθέντος",
+  "title_en": "The stone having been sealed",
+  "stage": 1,
+  "melodic_speed": "heirmologic",
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "he.a.m1_gr_GR_cog|heAU.TouLithouSfragisthentos.text",
+    "text_gr": "Τοῦ λίθου σφραγισθέντος ὑπὸ τῶν Ἰουδαίων, καὶ στρατιωτῶν φυλασσόντων τὸ ἄχραντόν σου σῶμα, ἀνέστης τριήμερος Σωτήρ, δωρούμενος τῷ κόσμῳ τὴν ζωήν. Διὰ τοῦτο αἱ Δυνάμεις τῶν οὐρανῶν ἐβόων σοι Ζωοδότα· Δόξα τῇ ἀναστάσει σου Χριστέ, δόξα τῇ βασιλείᾳ σου, δόξα τῇ οἰκονομίᾳ σου, μόνε Φιλάνθρωπε.",
+    "text_en": "The stone having been sealed by the Pharisees and chief priests, * and Your all-immaculate body being guarded by soldiers, * You rose on the third day, O Lord and Savior, granting life unto the world. * Then the powers of the heavens cried out to You, O Giver of Life, and shouted, * “Glory to Your resurrection, O Christ! * Glory to Your eternal rule! * Glory to Your plan for saving us, only benevolent God!”",
+    "translations_en": {
+      "Ages": "The stone had been secured with a seal by the Judeans, * and a guard of soldiers was watching Your immaculate body. * You rose on the third day, O Lord * and Savior, granting life unto the world. * And therefore the powers of heaven cried to You, O Giver-of-Life: * Glory to Your resurrection, O Christ; * glory to Your kingdom; * glory to Your dispensation, only One who loves mankind.",
+      "GOASD": "The stone having been sealed by the Pharisees and chief priests, * and Your all-immaculate body being guarded by soldiers, * You rose on the third day, O Lord and Savior, granting life unto the world. * Then the powers of the heavens cried out to You, O Giver of Life, and shouted, * “Glory to Your resurrection, O Christ! * Glory to Your eternal rule! * Glory to Your plan for saving us, only benevolent God!”",
+      "Lash": "When the stone had been sealed by the Jews, and while soldiers were guarding your spotless Body, you rose, O Saviour, on the third day, giving life to the world; and therefore the heavenly Powers cried out to you, Giver of life: Glory to your Resurrection, O Christ, glory to your Kingdom, glory to your Dispensation, only lover of mankind."
+    },
+    "version_en": "GOASD",
+    "mode": 1,
+    "mode_gr": "Ἦχος αʹ.\nΑὐτόμελον.",
+    "mode_en": "Mode 1. Automelon.",
+    "melody_model_gr": "Αὐτόμελον.",
+    "melody_model_en": "Automelon.",
+    "designation_gr": "Ἀπολυτίκιον Ἀναστάσιμον.",
+    "designation_en": "Resurrectional Apolytikion.",
+    "source_gr": "Τῆς Ὀκτωήχου - - -",
+    "source_en": "From Octoechos - - -",
+    "rubric_gr": "Ὁ λαὸς ἵσταται\nδιὰ τὴν ἀνάγνωσιν τῶν εὐχῶν.",
+    "rubric_en": "Stand for the reading of prayers",
+    "book": "Heirmologion",
+    "service": "AU",
+    "scores": [
+      {
+        "source": "theodoridis",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/theodoridis/gr/oc/m1/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/theodoridis/gr/oc/m1/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "jmboyer",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/jmboyer/gr/oc/m1/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/jmboyer/gr/oc/m1/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m1/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m1/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "roubanis",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/roubanis/gr/oc/m1/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/roubanis/gr/oc/m1/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/gr/oc/m1/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/gr/oc/m1/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m1/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m1/d1/ve/w/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m1/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m1/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m1/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m1/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m1/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m1/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m1/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m1/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m1/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m1/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m1/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m1/d1/ve/w/apolytikion (Ages).pdf"
+      }
+    ],
+    "audio": [
+      {
+        "source": "dedes",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/dedes/oc/m1/d1/ve/apolytikion.mp3",
+        "path": "media/a/dedes/oc/m1/d1/ve/apolytikion.mp3"
+      },
+      {
+        "source": "eikona",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/eikona/oc/m1/d1/ve/apolytikion.mp3",
+        "path": "media/a/eikona/oc/m1/d1/ve/apolytikion.mp3"
+      }
+    ],
+    "page": "/2026/10/03/vespers/",
+    "fetched": "2026-09-19"
+  }
+}

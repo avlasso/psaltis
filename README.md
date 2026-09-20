@@ -63,9 +63,36 @@ No backend, no accounts, no analytics, no paid services. Progress will live in t
 ## Layout
 
 - `src/` — the app. `pages/` holds one file per route.
-- `catalogue/` — content (hymns, modes, rundowns), arriving with work item 02. Adding a hymn or
-  swapping a video is a file edit here; no code changes for content.
+- `catalogue/` — content (hymns, modes, rundowns); see [`catalogue/README.md`](catalogue/README.md).
+  Adding a hymn or swapping a video is a file edit here; no code changes for content.
+- `psaltis/`, `tests/`, `pyproject.toml` — the Python content tools, below. Nothing in the app
+  imports them; `npm run build` never touches Python.
 - `docs/` — destination and work items.
+
+## Content tools (Python)
+
+The hymn JSON under `catalogue/hymns/` is written by a small ingest that reads an
+[icxc.pro](https://icxc.pro) service page (the same AGES engine as GOA's Digital Chant Stand,
+with stable `data-key`s). It is a dev tool: it runs on the operator's machine, commits its
+output, and is never part of the site.
+
+```sh
+python -m venv .venv && .venv/Scripts/activate      # or source .venv/bin/activate
+pip install -e ".[dev]"                             # httpx, beautifulsoup4, lxml; pytest
+pytest
+python -m psaltis ingest 2026-09-20 liturgy eu.lichrysbasil.euLI.Key1311 --no-media
+```
+
+`ingest DATE SERVICE [ID…]` fetches `icxc.pro/YYYY/MM/DD/<service>/` (cached under
+`../psaltis-library/cache/`), parses every hymn on it, and merges the ones whose id matches into
+`catalogue/hymns/<id>.json`, replacing the `icxc` block and leaving the operator's top-level
+fields alone. `--no-media` records score and audio URLs without downloading anything; PDFs and
+mp3s are never committed to this repo (`.gitignore` enforces it), and icxc/GOA audio is never
+played from the app. `tests/fixtures/` holds runs of rows cut from real pages; the parser's rules
+for modes and scores are documented at the top of `psaltis/ingest.py`.
+
+[`.github/workflows/python.yml`](.github/workflows/python.yml) runs `pytest` when these files
+change; it does not gate the Pages deploy.
 
 ## Conventions
 

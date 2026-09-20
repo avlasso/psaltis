@@ -1,0 +1,24 @@
+# Python dev tools only: the ingest that writes catalogue/ JSON. Nothing here runs in the app.
+[project]
+name = "psaltis"
+version = "0.2.0"
+description = "Content tools for psaltis: ingest hymns from icxc.pro into catalogue/"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx",
+    "beautifulsoup4",
+    "lxml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["psaltis"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

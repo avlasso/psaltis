@@ -1,0 +1,138 @@
+{
+  "id": "oc.m2.d1.ocVE.Apolytikion",
+  "kind": "hymn",
+  "title_gr": "Ὅτε κατῆλθες πρὸς τὸν θάνατον",
+  "title_en": "When You descended unto death",
+  "stage": 1,
+  "melodic_speed": "heirmologic",
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "oc.m2.d1_gr_GR_cog|ocVE.Apolytikion.text",
+    "text_gr": "Ὅτε κατῆλθες πρὸς τὸν θάνατον, ἡ ζωὴ ἡ ἀθάνατος, τότε τὸν ᾅδην ἐνέκρωσας, τῇ ἀστραπῇ τῆς θεότητος· ὅτε δὲ καὶ τοὺς τεθνεῶτας, ἐκ τῶν καταχθονίων ἀνέστησας, πᾶσαι αἱ δυνάμεις τῶν ἐπουρανίων ἐκραύγαζον· Ζωοδότα Χριστέ, ὁ Θεὸς ἡμῶν δόξα σοι.",
+    "text_en": "When You descended unto Death, O Lord, You who are immortal Life put Hades to death, by the lightning of Your divinity. And when You raised the dead from the netherworld, all the hosts of heaven sang aloud to You, “O Christ God, Giver of life, glory to You!”",
+    "translations_en": {
+      "Ages": "When You descended unto death, O Lord who yourself are immortal Life, then did You mortify Hades by the lightning flash of Your Divinity. Also when You raised the dead from the netherworld, all the Powers of the heavens were crying out: O Giver of life, Christ our God, glory be to You.",
+      "GOASD": "When You descended unto Death, O Lord, You who are immortal Life put Hades to death, by the lightning of Your divinity. And when You raised the dead from the netherworld, all the hosts of heaven sang aloud to You, “O Christ God, Giver of life, glory to You!”",
+      "Lash": "When you went down to death, O immortal Life, then you slew Hell with the lightning flash of your Godhead; but when from the depths below the earth you raised the dead, all the Powers in the heavens cried out, 'Giver of life, Christ our God, glory to you!'",
+      "Repass": "When you descended to death, O Life Immortal, you slew hades with the splendor of your Divinity; and when from beneath the earth you raised the dead, all the heavenly powers cried: O Giver of life, Christ our God, glory to you.",
+      "Swahili": "Ee uliye uzima usiyekufa, ulishuka kifoni na kuangamiza kuzimu kwa mng'aro wa umungu, ulifufua watu kuzimuni mwa nchi, majeshi yote ya mbinguni yalipaza sauti: Ee Kristo Mungu wetu mpaji wa uhai, utukufu kwako."
+    },
+    "version_en": "GOASD",
+    "mode": 2,
+    "mode_gr": "Ἦχος βʹ.",
+    "mode_en": "Mode 2.",
+    "melody_model_gr": "",
+    "melody_model_en": "",
+    "designation_gr": "Ἀπολυτίκιον Ἀναστάσιμον.",
+    "designation_en": "Resurrectional Apolytikion.",
+    "source_gr": "Τῆς Ὀκτωήχου - - -",
+    "source_en": "From Octoechos - - -",
+    "rubric_gr": "Ὁ λαὸς ἵσταται\nδιὰ τὴν ἀνάγνωσιν τῶν εὐχῶν.",
+    "rubric_en": "Stand for the reading of prayers",
+    "book": "Octoechos",
+    "service": "Vespers",
+    "scores": [
+      {
+        "source": "apostolou",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/apostolou/gr/oc/m2/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/apostolou/gr/oc/m2/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "theodoridis",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/theodoridis/gr/oc/m2/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/theodoridis/gr/oc/m2/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m2/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m2/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "roubanis",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/roubanis/gr/oc/m2/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/roubanis/gr/oc/m2/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/gr/oc/m2/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/gr/oc/m2/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m2/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m2/d1/ve/w/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m2/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m2/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m2/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m2/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m2/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m2/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m2/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m2/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m2/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m2/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m2/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m2/d1/ve/w/apolytikion (Ages).pdf"
+      }
+    ],
+    "audio": [
+      {
+        "source": "dedes",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/dedes/oc/m2/d1/ve/apolytikion.mp3",
+        "path": "media/a/dedes/oc/m2/d1/ve/apolytikion.mp3"
+      },
+      {
+        "source": "eikona",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/eikona/oc/m2/d1/ve/apolytikion.mp3",
+        "path": "media/a/eikona/oc/m2/d1/ve/apolytikion.mp3"
+      }
+    ],
+    "page": "/2026/10/10/vespers/",
+    "fetched": "2026-09-19"
+  }
+}

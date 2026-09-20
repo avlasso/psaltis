@@ -4,3 +4,15 @@
 # Node
 node_modules/
 dist/
+
+# Python (content tools)
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Scores and recordings never live here: the ingest keeps them in ../psaltis-library/
+*.pdf
+*.mp3
+*.m4a

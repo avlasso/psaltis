@@ -1,0 +1,143 @@
+{
+  "id": "eu.lichrysbasil.euLI.Key1311",
+  "kind": "hymn",
+  "title_gr": "Ἅγιος, ἅγιος, ἅγιος, Κύριος",
+  "title_en": "Holy, holy, holy, Lord",
+  "stage": null,
+  "melodic_speed": null,
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "eu.lichrysbasil_gr_US_goa|euLI.Key1311.text",
+    "text_gr": "Ἅγιος, ἅγιος, ἅγιος, Κύριος Σαβαώθ· πλήρης ὁ οὐρανὸς καὶ ἡ γῆ τῆς δόξης σου. Ὡσαννά, ἐν τοῖς ὑψίστοις· εὐλογημένος ὁ ἐρχόμενος ἐν ὀνόματι Κυρίου. Ὡσαννά, ὁ ἐν τοῖς ὑψίστοις.",
+    "text_en": "Holy, holy, holy, Lord Sabaoth, heaven and earth are filled with Your glory. Hosanna in the highest. Blessed is He who comes in the name of the Lord. Hosanna in the highest.",
+    "translations_en": {
+      "French": "Saint, Saint, Saint, le Seigneur Sabaoth. Les cieux et la terre sont remplis de ta gloire. Hosanna au plus haut des cieux. Béni est celui qui vient au nom du Seigneur. Hosanna au plus haut des cieux.",
+      "GOA": "Holy, holy, holy, Lord Sabaoth, heaven and earth are filled with Your glory. Hosanna in the highest. Blessed is He who comes in the name of the Lord. Hosanna in the highest.",
+      "HolyCross": "Holy, holy, holy, Lord Sabaoth, heaven and earth are filled with Your glory. Hosanna in the highest. Blessed is He who comes in the name of the Lord. Hosanna to God in the highest.",
+      "Lash": "Holy, holy, holy, Lord Sabaoth; heaven and earth are full of your glory. Hosanna in the highest. Blessed is he who comes in the name of the Lord. Hosanna in the highest.",
+      "Swahili": "Mtakatifu, mtakatifu, mtakatifu, Bwana Sabaoth. Nchi na mbingu zimejazwa na utukufu wako. Hosanna mbinguni juu. Mhimidiwa ajaye kwa jina la Bwana. Hosana uliye mbinguni juu.",
+      "Slavonic": "Свят, свят, свят Господь Саваоф: исполнь небо и земля славы Твоея. Осанна в вышних, благословен грядый во имя Господне. Осанна в вышних.",
+      "Spanish": "Santo, Santo, Santo es el Señor, Sabaoth. Llenos están los cielos y la tierra de tu gloria. Hosanna en las alturas. Bendito es El que viene en nombre del Señor. Hosanna en las alturas.",
+      "German": "Heilig, heilig, heilig ist der Herr Sabaoth, voll ist der Himmel und die Erde deiner Herrlichkeit: Hosanna in in den Höhen! gesegnet sei der da kommt im Namen des Herrn; Hosanna in den Höhen!"
+    },
+    "version_en": "",
+    "mode": null,
+    "mode_gr": "",
+    "mode_en": "",
+    "melody_model_gr": "",
+    "melody_model_en": "",
+    "designation_gr": "",
+    "designation_en": "",
+    "source_gr": "",
+    "source_en": "",
+    "rubric_gr": "",
+    "rubric_en": "",
+    "book": "Euchologion",
+    "service": "Liturgy",
+    "scores": [
+      {
+        "source": "barrett",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/barrett/gr/eu/lichrysbasil/b/liturgicmode4kliton.pdf",
+        "path": "media/m/barrett/gr/eu/lichrysbasil/b/liturgicmode4kliton.pdf",
+        "label": "Mode 4 Kliton | RBarrett/",
+        "mode": 4
+      },
+      {
+        "source": "barrett",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/barrett/gr/eu/lichrysbasil/w/liturgicmode4kliton.pdf",
+        "path": "media/m/barrett/gr/eu/lichrysbasil/w/liturgicmode4kliton.pdf",
+        "label": "Mode 4 Kliton | RBarrett/",
+        "mode": 4
+      },
+      {
+        "source": "barrett",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/barrett/en/eu/lichrysbasil/b/liturgicmode4kliton.pdf",
+        "path": "media/m/barrett/en/eu/lichrysbasil/b/liturgicmode4kliton.pdf",
+        "label": "Mode 4 Kliton (GOA) | R Barrett/",
+        "mode": 4
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/eu/lichrysbasil/w/liturgicmode1.pdf",
+        "path": "media/m/dedes/en/eu/lichrysbasil/w/liturgicmode1.pdf",
+        "label": "Mode 1 (GOA) | SDedes/",
+        "mode": 1
+      },
+      {
+        "source": "barrett",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/barrett/en/eu/lichrysbasil/w/liturgicmode4kliton.pdf",
+        "path": "media/m/barrett/en/eu/lichrysbasil/w/liturgicmode4kliton.pdf",
+        "label": "Mode 4 Kliton (GOA) | R Barrett/",
+        "mode": 4
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/eu/lichrysbasil/w/liturgicmode8_simple.pdf",
+        "path": "media/m/dedes/en/eu/lichrysbasil/w/liturgicmode8_simple.pdf",
+        "label": "Mode pl. 4 (simple) | SDedes/",
+        "mode": 8
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/eu/lichrysbasil/w/liturgicmode6.pdf",
+        "path": "media/m/dedes/en/eu/lichrysbasil/w/liturgicmode6.pdf",
+        "label": "Mode pl. 2 (HC) | SDedes/",
+        "mode": 6
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/eu/lichrysbasil/w/liturgicmode8.pdf",
+        "path": "media/m/dedes/en/eu/lichrysbasil/w/liturgicmode8.pdf",
+        "label": "Mode pl. 4 (HC) | SDedes/",
+        "mode": 8
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/eu/lichrysbasil/w/liturgicmode1%20%28Ages%29.pdf",
+        "path": "media/m/en_public/eu/lichrysbasil/w/liturgicmode1 (Ages).pdf",
+        "label": "Mode 1 (GOA) | AGES",
+        "mode": 1
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/eu/lichrysbasil/w/liturgicmode6%20%28Ages%29.pdf",
+        "path": "media/m/en_public/eu/lichrysbasil/w/liturgicmode6 (Ages).pdf",
+        "label": "Mode pl. 2 (HC) | AGES",
+        "mode": 6
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/eu/lichrysbasil/w/liturgicmode8%20%28Ages%29.pdf",
+        "path": "media/m/en_public/eu/lichrysbasil/w/liturgicmode8 (Ages).pdf",
+        "label": "Mode pl. 4 (HC) | AGES",
+        "mode": 8
+      }
+    ],
+    "audio": [],
+    "page": "/2026/09/20/liturgy/",
+    "fetched": "2026-09-20"
+  }
+}

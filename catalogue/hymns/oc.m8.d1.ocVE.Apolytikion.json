@@ -1,0 +1,137 @@
+{
+  "id": "oc.m8.d1.ocVE.Apolytikion",
+  "kind": "hymn",
+  "title_gr": "Ἐξ ὕψους κατῆλθες",
+  "title_en": "You descended from on high",
+  "stage": 1,
+  "melodic_speed": "heirmologic",
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "oc.m8.d1_gr_GR_cog|ocVE.Apolytikion.text",
+    "text_gr": "Ἐξ ὕψους κατῆλθες ὁ Εὔσπλαγχνος, ταφὴν κατεδέξω τριήμερον, ἵνα ἡμᾶς ἐλευθερώσῃς τῶν παθῶν. Ἡ ζωὴ καὶ ἡ ἀνάστασις ἡμῶν, Κύριε δόξα σοι.",
+    "text_en": "You descended from on high, O compassionate One, and consented to a three-day burial, to free us from the passions. O Lord, our life and resurrection, glory to You!",
+    "translations_en": {
+      "Ages": "You descended from on high, O compassionate One, and condescended to be buried for three days, so that from the passions You might set us free. Our life and resurrection, O Lord, glory be to You.",
+      "GOASD": "You descended from on high, O compassionate One, and consented to a three-day burial, to free us from the passions. O Lord, our life and resurrection, glory to You!",
+      "Lash": "You came down from on high, O Compassionate, you accepted burial for three days, that you might free us from the passions. Our Life and Resurrection, Lord, glory to you.",
+      "Repass": "From on high you descended, O compassionate one. You accepted the three-day burial to free us from the passions. O Lord, our life and Resurrection, glory to you."
+    },
+    "version_en": "GOASD",
+    "mode": 8,
+    "mode_gr": "Ἦχος πλ. δʹ.",
+    "mode_en": "Mode pl. 4.",
+    "melody_model_gr": "",
+    "melody_model_en": "",
+    "designation_gr": "Ἀπολυτίκιον Ἀναστάσιμον.",
+    "designation_en": "Resurrectional Apolytikion.",
+    "source_gr": "Τῆς Ὀκτωήχου - - -",
+    "source_en": "From Octoechos - - -",
+    "rubric_gr": "Ὁ λαὸς ἵσταται\nδιὰ τὴν ἀνάγνωσιν τῶν εὐχῶν.",
+    "rubric_en": "Stand for the reading of prayers",
+    "book": "Octoechos",
+    "service": "Vespers",
+    "scores": [
+      {
+        "source": "theodoridis",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/theodoridis/gr/oc/m8/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/theodoridis/gr/oc/m8/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "jmboyer",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/jmboyer/gr/oc/m8/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/jmboyer/gr/oc/m8/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m8/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m8/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "roubanis",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/roubanis/gr/oc/m8/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/roubanis/gr/oc/m8/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/gr/oc/m8/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/gr/oc/m8/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m8/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m8/d1/ve/w/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m8/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m8/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m8/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m8/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m8/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m8/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m8/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m8/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m8/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m8/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m8/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m8/d1/ve/w/apolytikion (Ages).pdf"
+      }
+    ],
+    "audio": [
+      {
+        "source": "dedes",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/dedes/oc/m8/d1/ve/apolytikion.mp3",
+        "path": "media/a/dedes/oc/m8/d1/ve/apolytikion.mp3"
+      },
+      {
+        "source": "eikona",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/eikona/oc/m8/d1/ve/apolytikion.mp3",
+        "path": "media/a/eikona/oc/m8/d1/ve/apolytikion.mp3"
+      }
+    ],
+    "page": "/2026/09/26/vespers/",
+    "fetched": "2026-09-19"
+  }
+}

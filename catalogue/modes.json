@@ -1,0 +1,74 @@
+[
+  {
+    "number": 1,
+    "name_gr": "Ἦχος αʹ",
+    "name_en": "First Mode",
+    "apechema": "Ἀνανές",
+    "apechema_latin": "A-na-nés",
+    "character": "Diatonic, bright and confident; the mode of the Paschal canon and of resurrectional joy.",
+    "apechema_hymn_id": "apechema.m1"
+  },
+  {
+    "number": 2,
+    "name_gr": "Ἦχος βʹ",
+    "name_en": "Second Mode",
+    "apechema": "Νεανές",
+    "apechema_latin": "Ne-a-nés",
+    "character": "Soft chromatic, tender and sweet; suited to petition and to the Theotokos.",
+    "apechema_hymn_id": "apechema.m2"
+  },
+  {
+    "number": 3,
+    "name_gr": "Ἦχος γʹ",
+    "name_en": "Third Mode",
+    "apechema": "Νανά",
+    "apechema_latin": "Na-ná",
+    "character": "Enharmonic, martial and heroic; strides up from its base with a hard, open sound.",
+    "apechema_hymn_id": "apechema.m3"
+  },
+  {
+    "number": 4,
+    "name_gr": "Ἦχος δʹ",
+    "name_en": "Fourth Mode",
+    "apechema": "Ἅγια",
+    "apechema_latin": "Á-yi-a",
+    "character": "Diatonic, festive and dance-like; its heirmologic branch (Legetos) is gentler and more spacious.",
+    "apechema_hymn_id": "apechema.m4"
+  },
+  {
+    "number": 5,
+    "name_gr": "Ἦχος πλ. αʹ",
+    "name_en": "Plagal First Mode",
+    "apechema": "Ἀνεανές",
+    "apechema_latin": "A-ne-a-nés",
+    "character": "Diatonic, sweet with a shade of sorrow; the mode of 'Christ is risen' and of the funeral hymns alike.",
+    "apechema_hymn_id": "apechema.m5"
+  },
+  {
+    "number": 6,
+    "name_gr": "Ἦχος πλ. βʹ",
+    "name_en": "Plagal Second Mode",
+    "apechema": "Νεχεανές",
+    "apechema_latin": "Ne-che-a-nés",
+    "character": "Hard chromatic, deeply mournful and penitential; the Holy Week mode.",
+    "apechema_hymn_id": "apechema.m6"
+  },
+  {
+    "number": 7,
+    "name_gr": "Ἦχος βαρύς",
+    "name_en": "Grave Mode",
+    "apechema": "Ἀανές",
+    "apechema_latin": "A-a-nés",
+    "character": "Enharmonic and low-lying, solemn and weighty, as its name says; it settles rather than soars.",
+    "apechema_hymn_id": "apechema.m7"
+  },
+  {
+    "number": 8,
+    "name_gr": "Ἦχος πλ. δʹ",
+    "name_en": "Plagal Fourth Mode",
+    "apechema": "Νεάγιε",
+    "apechema_latin": "Ne-á-yi-e",
+    "character": "Diatonic, calm and settled; the everyday mode of doxologies and many well-known hymns.",
+    "apechema_hymn_id": "apechema.m8"
+  }
+]

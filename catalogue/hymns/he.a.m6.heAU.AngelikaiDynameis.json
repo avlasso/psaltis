@@ -1,0 +1,144 @@
+{
+  "id": "he.a.m6.heAU.AngelikaiDynameis",
+  "kind": "hymn",
+  "title_gr": "Ἀγγελικαὶ δυνάμεις",
+  "title_en": "When the angelic powers appeared",
+  "stage": 1,
+  "melodic_speed": "heirmologic",
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "he.a.m6_gr_GR_cog|heAU.AngelikaiDynameis.text",
+    "text_gr": "Ἀγγελικαὶ Δυνάμεις ἐπὶ τὸ μνῆμά σου, καὶ οἱ φυλάσσοντες ἀπενεκρώθησαν· καὶ ἵστατο Μαρία ἐν τῷ τάφῳ ζητοῦσα τὸ ἄχραντόν σου σῶμα. Ἐσκύλευσας τὸν Ἅδην, μὴ πειρασθεὶς ὑπʼ αὐτοῦ· ὑπήντησας τῇ Παρθένῳ, δωρούμενος τὴν ζωήν. Ὁ ἀναστὰς ἐκ τῶν νεκρῶν, Κύριε δόξα σοι.",
+    "text_en": "When the angelic powers appeared at Your tomb, * the soldiers guarding it feared and became as dead. * And standing by the sepulcher was Mary, who was seeking Your immaculate body. * Unassailed by Hades, You divested it of spoils. * Then You met the Virgin. You granted life. * O Lord, risen from the dead, glory to You!",
+    "translations_en": {
+      "Ages": "When the angelic powers appeared at Your grave, * the soldiers guarding it feared and became as dead. * And standing at the sepulcher was Mary who was seeking Your immaculate body. * You devastated Hades, not afflicted by it. * You went to meet the Virgin and granted eternal life. * You resurrected from the dead. O Lord, glory to You.",
+      "GOASD": "When the angelic powers appeared at Your grave, * the soldiers guarding it feared and became as dead. * And standing at the sepulcher was Mary who was seeking Your immaculate body. * You devastated Hades, not afflicted by it. * You went to meet the Virgin and granted eternal life. * You resurrected from the dead. O Lord, glory to You.",
+      "Lash": "Angelic powers were by your tomb and the those who guarded it became as dead; and Mary stood at the grave seeking your most pure Body. You plundered Hades and were not tried by it. You met the Virgin and granted life. Lord risen from the dead, glory to you!",
+      "Repass": "The Angelic Powers were at your tomb; the guards became as dead men. Mary stood by your grave, seeking your most pure Body. You despoiled hades, not being tempted by it; you came to the Virgin, granting life; O Lord, who arose from the dead, glory to you."
+    },
+    "version_en": "GOASD",
+    "mode": 6,
+    "mode_gr": "Ἦχος πλ. βʹ.\nΑὐτόμελον.",
+    "mode_en": "Mode pl. 2. Automelon.",
+    "melody_model_gr": "Αὐτόμελον.",
+    "melody_model_en": "Automelon.",
+    "designation_gr": "Ἀπολυτίκιον Ἀναστάσιμον.",
+    "designation_en": "Resurrectional Apolytikion.",
+    "source_gr": "Τῆς Ὀκτωήχου - - -",
+    "source_en": "From Octoechos - - -",
+    "rubric_gr": "Ὁ λαὸς ἵσταται\nδιὰ τὴν ἀνάγνωσιν τῶν εὐχῶν.",
+    "rubric_en": "Stand for the reading of prayers",
+    "book": "Heirmologion",
+    "service": "AU",
+    "scores": [
+      {
+        "source": "theodoridis",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/theodoridis/gr/oc/m6/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/theodoridis/gr/oc/m6/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "jmboyer",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/jmboyer/gr/oc/m6/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/jmboyer/gr/oc/m6/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m6/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m6/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "roubanis",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/roubanis/gr/oc/m6/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/roubanis/gr/oc/m6/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/gr/oc/m6/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/gr/oc/m6/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "barrett",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/barrett/gr/oc/m6/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/barrett/gr/oc/m6/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m6/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m6/d1/ve/w/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m6/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m6/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m6/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m6/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m6/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m6/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m6/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m6/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m6/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m6/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m6/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m6/d1/ve/w/apolytikion (Ages).pdf"
+      }
+    ],
+    "audio": [
+      {
+        "source": "dedes",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/dedes/oc/m6/d1/ve/apolytikion.mp3",
+        "path": "media/a/dedes/oc/m6/d1/ve/apolytikion.mp3"
+      },
+      {
+        "source": "eikona",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/eikona/oc/m6/d1/ve/apolytikion.mp3",
+        "path": "media/a/eikona/oc/m6/d1/ve/apolytikion.mp3"
+      }
+    ],
+    "page": "/2026/11/07/vespers/",
+    "fetched": "2026-09-19"
+  }
+}

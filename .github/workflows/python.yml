@@ -1,0 +1,22 @@
+name: Content tools
+
+# The Python ingest is a dev tool that writes catalogue/ JSON; it never runs in the app.
+# This job only keeps its parser honest. Pages deployment is deploy.yml and does not depend on it.
+on:
+  push:
+    branches: [main]
+    paths: ['psaltis/**', 'tests/**', 'pyproject.toml', '.github/workflows/python.yml']
+  pull_request:
+    paths: ['psaltis/**', 'tests/**', 'pyproject.toml', '.github/workflows/python.yml']
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -e .[dev]
+      - run: pytest

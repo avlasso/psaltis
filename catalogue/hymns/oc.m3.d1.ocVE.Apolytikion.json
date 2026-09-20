@@ -1,0 +1,137 @@
+{
+  "id": "oc.m3.d1.ocVE.Apolytikion",
+  "kind": "hymn",
+  "title_gr": "Εὐφραινέσθω τὰ οὐράνια",
+  "title_en": "Let the heavens rejoice",
+  "stage": 1,
+  "melodic_speed": "heirmologic",
+  "transliteration": null,
+  "phrases": [],
+  "icxc": {
+    "icxc_key": "oc.m3.d1_gr_GR_cog|ocVE.Apolytikion.text",
+    "text_gr": "Εὐφραινέσθω τὰ οὐράνια, ἀγαλλιάσθω τὰ ἐπίγεια, ὅτι ἐποίησε κράτος ἐν βραχίονι αὐτοῦ, ὁ Κύριος· ἐπάτησε τῷ θανάτῳ τὸν θάνατον· πρωτότοκος τῶν νεκρῶν ἐγένετο· ἐκ κοιλίας ᾅδου ἐῤῥύσατο ἡμᾶς, καὶ παρέσχε τῷ κόσμῳ τὸ μέγα ἔλεος.",
+    "text_en": "Let the heavens be glad. Let the earth rejoice exceedingly. For the Lord has shown strength with his arm. He trampled death by death. He became the first-born of the dead. Out of the belly of Hades, He has rescued us, and to the world He has granted the great mercy.",
+    "translations_en": {
+      "Ages": "Let the heavens sing for joy, and let everything on earth be glad. For with His Arm the Lord has worked power. He trampled death under foot by means of death; and He became the firstborn from the dead. From the maw of Hades He delivered us; and He granted the world His great mercy.",
+      "GOASD": "Let the heavens be glad. Let the earth rejoice exceedingly. For the Lord has shown strength with his arm. He trampled death by death. He became the first-born of the dead. Out of the belly of Hades, He has rescued us, and to the world He has granted the great mercy.",
+      "Lash": "Let everything in heaven rejoice, let everything on earth be glad, for the Lord has shown strength with his arm; by death he has trampled on death; he has become the first-born of the dead; from the bowels of Hades he has delivered us; and granted the world his great mercy.",
+      "Repass": "Let the heavens rejoice! Let the earth be glad! For the Lord has shown strength with his arm. He has trampled down death by death. He has become the first-born of the dead. He has delivered us from the depths of hell, and has granted the world great mercy."
+    },
+    "version_en": "GOASD",
+    "mode": 3,
+    "mode_gr": "Ἦχος γʹ.",
+    "mode_en": "Mode 3.",
+    "melody_model_gr": "",
+    "melody_model_en": "",
+    "designation_gr": "Ἀπολυτίκιον Ἀναστάσιμον.",
+    "designation_en": "Resurrectional Apolytikion.",
+    "source_gr": "Τῆς Ὀκτωήχου - - -",
+    "source_en": "From Octoechos - - -",
+    "rubric_gr": "Ὁ λαὸς ἵσταται\nδιὰ τὴν ἀνάγνωσιν τῶν εὐχῶν.",
+    "rubric_en": "Stand for the reading of prayers",
+    "book": "Octoechos",
+    "service": "Vespers",
+    "scores": [
+      {
+        "source": "theodoridis",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/theodoridis/gr/oc/m3/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/theodoridis/gr/oc/m3/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "jmboyer",
+        "language": "gr",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/jmboyer/gr/oc/m3/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/jmboyer/gr/oc/m3/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m3/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m3/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "roubanis",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/roubanis/gr/oc/m3/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/roubanis/gr/oc/m3/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "gr",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/gr/oc/m3/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/gr/oc/m3/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m3/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m3/d1/ve/w/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m3/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m3/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m3/d1/ve/b/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m3/d1/ve/b/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "byzantine",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m3/d1/ve/b/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m3/d1/ve/b/apolytikion (Ages).pdf"
+      },
+      {
+        "source": "dedes",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/dedes/en/oc/m3/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/dedes/en/oc/m3/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "thyateira",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/thyateira/en/oc/m3/d1/ve/w/apolytikion.pdf",
+        "path": "media/m/thyateira/en/oc/m3/d1/ve/w/apolytikion.pdf"
+      },
+      {
+        "source": "en_public",
+        "language": "en",
+        "notation": "western",
+        "url": "https://icxc.pro/api/file?path=media/m/en_public/oc/m3/d1/ve/w/apolytikion%20%28Ages%29.pdf",
+        "path": "media/m/en_public/oc/m3/d1/ve/w/apolytikion (Ages).pdf"
+      }
+    ],
+    "audio": [
+      {
+        "source": "dedes",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/dedes/oc/m3/d1/ve/apolytikion.mp3",
+        "path": "media/a/dedes/oc/m3/d1/ve/apolytikion.mp3"
+      },
+      {
+        "source": "eikona",
+        "language": "en",
+        "url": "https://icxc.pro/api/file?path=media/a/eikona/oc/m3/d1/ve/apolytikion.mp3",
+        "path": "media/a/eikona/oc/m3/d1/ve/apolytikion.mp3"
+      }
+    ],
+    "page": "/2026/10/17/vespers/",
+    "fetched": "2026-09-19"
+  }
+}
