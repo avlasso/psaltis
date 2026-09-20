@@ -62,7 +62,10 @@ No backend, no accounts, no analytics, no paid services. Progress will live in t
 
 ## Layout
 
-- `src/` — the app. `pages/` holds one file per route.
+- `src/` — the app. `pages/` holds one file per route. `theory/` is the interval system
+  (`moria.ts`: 72 moria, the Committee genera; `modes.ts`: the eight modes as reviewable data
+  with the text each claim is cited to; `pitch.ts`: the movable base note). `audio/` is the
+  Web Audio synth; `components/ladder.tsx` is the ladder that *play*, *tune* and practice share.
 - `catalogue/` — content (hymns, modes, rundowns); see [`catalogue/README.md`](catalogue/README.md).
   Adding a hymn or swapping a video is a file edit here; no code changes for content.
 - `psaltis/`, `tests/`, `pyproject.toml` — the Python content tools, below. Nothing in the app

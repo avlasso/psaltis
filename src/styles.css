@@ -138,3 +138,240 @@ a.tile:focus-visible {
 .page h1 {
   margin-top: 0.5rem;
 }
+
+/* Scales list */
+
+.modes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.mode {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  grid-template-areas:
+    'short name badge'
+    'short genus badge';
+  align-items: center;
+  column-gap: 0.75rem;
+  background: var(--tile);
+  border: 1px solid var(--tile-border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.mode--soon {
+  opacity: 0.6;
+}
+
+.mode__short {
+  grid-area: short;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.mode__name {
+  grid-area: name;
+}
+
+.mode__gr {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.mode__genus {
+  grid-area: genus;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.mode .badge {
+  grid-area: badge;
+  margin: 0;
+}
+
+.mode__soon {
+  grid-area: badge;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Mode page: controls and ladder */
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--tile-border);
+  background: var(--tile);
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.control svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.control--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.control--on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.ladder {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.ladder__base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.ladder__base button {
+  font: inherit;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--tile-border);
+  background: var(--tile);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.ladder__base button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.ladder__base button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ladder__base-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.25rem 0;
+}
+
+.ladder__hz {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.ladder__hint {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.55;
+  margin-left: 0.4rem;
+}
+
+.ladder__rail {
+  position: relative;
+  height: 26rem;
+  margin: 1rem 0 1rem 3.25rem;
+  border-left: 2px solid var(--tile-border);
+}
+
+.ladder__moria {
+  position: absolute;
+  right: calc(100% + 0.6rem);
+  transform: translateY(50%);
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ladder__step {
+  position: absolute;
+  left: -2px;
+  transform: translateY(50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--fg);
+  background: none;
+  border: 0;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.ladder__rung {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background: var(--tile-border);
+  margin-right: 0.6rem;
+}
+
+.ladder__step--active {
+  color: var(--accent);
+}
+
+.ladder__step--active .ladder__rung {
+  background: var(--accent);
+  height: 3px;
+}
+
+.hint-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sources h2 {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.source q {
+  font-style: italic;
+}
+
+.source__cite {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.source__cite a {
+  color: var(--accent);
+}
