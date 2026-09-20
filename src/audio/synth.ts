@@ -10,6 +10,13 @@ export function upAndDown(stepCount: number): number[] {
   return [...up, ...up.slice(0, -1).reverse()];
 }
 
+/**
+ * A silent WAV. iOS keeps Web Audio under the ring/silent switch until the page has played
+ * media; playing this once on the first tap moves the page to the media category, after
+ * which the oscillators sound with the switch on silent, like any other media.
+ */
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQgAAAAAAAAAAAAAAA==';
+
 const ATTACK = 0.02;
 const RELEASE = 0.12;
 const STEP_GAIN = 0.35;
@@ -28,14 +35,28 @@ export interface Playback {
 export class Synth {
   private ctx: AudioContext | null = null;
   private ison: Voice | null = null;
+  private media: HTMLAudioElement | null = null;
 
   private context(): AudioContext {
     if (!this.ctx) {
       const Ctor = window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       this.ctx = new Ctor();
+      this.wakeMedia();
     }
-    if (this.ctx.state === 'suspended') void this.ctx.resume();
+    if (this.ctx.state !== 'running') void this.ctx.resume();
     return this.ctx;
+  }
+
+  private wakeMedia(): void {
+    if (this.media) return;
+    const a = new Audio(SILENT_WAV);
+    a.setAttribute('playsinline', '');
+    a.preload = 'auto';
+    this.media = a;
+    a.play().catch(() => {
+      // Autoplay policy refused it: we were not in a gesture. The next tap tries again.
+      this.media = null;
+    });
   }
 
   /**
