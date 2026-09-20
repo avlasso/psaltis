@@ -46,6 +46,15 @@ export interface Source {
 }
 
 /**
+ * A short factoid for the tutor panel: plain explanation, not a quotation. Notes may be
+ * AI-drafted and are always shown as notes, visibly distinct from sources; anything
+ * historical or narrative must be a `Source` instead. Item 07 sets the length limit.
+ */
+export interface Note {
+  text: string;
+}
+
+/**
  * A standard attraction (ἕλξις): a step pulled toward a neighbour under a melodic
  * condition. Recorded as data; not played by the ladder. `moria` is signed (negative =
  * lowered) and null where the cited text gives the rule but not the size.
@@ -77,6 +86,7 @@ export interface Mode {
   /** Null when the cited text does not cover attractions; an empty list would claim there are none. */
   attractions: Attraction[] | null;
   sources: Source[];
+  notes: Note[];
   /** True when any field above is null for want of a source; the page must say so. */
   partial: boolean;
   /** Roadmap: tagged Beginner on the Scales list. */
@@ -118,13 +128,24 @@ const pl4: Mode = {
       where: 'p. 3',
     },
   ],
+  notes: [
+    {
+      text: 'The diatonic modes — Pl. 4, 1, Pl. 1 and 4 — share one set of pitches, Νη Πα Βου Γα Δη Κε Ζω, built from 12‑10‑8 tetrachords. What makes this ladder Pl. 4’s is where it stands: the octave is read from Νη. Read the same rungs from Πα and the numbers between them change — that is First mode’s scale.',
+    },
+    {
+      text: 'A mode is more than its scale. Pl. 4 also has its base and resting notes, its attractions — rungs that bend as the melody moves through them — and its own melodic formulae, announced by the apechema Νεάγιε. The ladder shows the first of these; the hymns teach the rest.',
+    },
+    {
+      text: 'The numbers between rungs are moria: the octave is 72 of them, and Byzantine intervals are whole numbers of moria rather than a piano’s 100‑cent semitones. 12 is close to a Western whole tone; 8 is well short of one — which is why Βου and Ζω sound flatter than a piano’s E and B.',
+    },
+  ],
   partial: false,
   beginner: true,
 };
 
 /** A mode whose genus is settled but whose table is not yet sourced. */
 function unsourced(fields: Pick<Mode, 'id' | 'number' | 'nameGr' | 'nameEn' | 'short' | 'genus'>): Mode {
-  return { ...fields, base: null, span: null, intervals: null, attractions: null, sources: [], partial: true };
+  return { ...fields, base: null, span: null, intervals: null, attractions: null, sources: [], notes: [], partial: true };
 }
 
 /** All eight, in roadmap order: diatonic, then chromatic, then enharmonic. */

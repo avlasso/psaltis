@@ -41,6 +41,13 @@ describe('modes data', () => {
     }
   });
 
+  it('keeps notes short and distinct from sources', () => {
+    const pl4 = modeById('pl4')!;
+    expect(pl4.notes.length).toBeGreaterThan(0);
+    // Item 07 fixes the limit; 400 characters is its suggested figure.
+    for (const n of pl4.notes) expect(n.text.length).toBeLessThanOrEqual(400);
+  });
+
   it('defaults Νη to C4 at A = 440', () => {
     expect(DEFAULT_NI_HZ).toBeCloseTo(440 * 2 ** (-9 / 12), 2);
   });
