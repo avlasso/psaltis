@@ -488,6 +488,36 @@ a.mode:focus-visible {
   border-radius: 0.5rem;
 }
 
+.lab__meter {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 8rem;
+  height: 0.6rem;
+  margin-right: 0.5rem;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lab__meter-fill {
+  display: block;
+  height: 100%;
+  background: var(--muted);
+}
+
+.lab__meter-fill--open {
+  background: var(--accent);
+}
+
+.lab__meter-gate {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--fg);
+}
+
 .lab__error {
   color: #b03a2e;
 }

@@ -9,8 +9,11 @@ import { type Detector, McLeod } from './detectors';
 
 /** Frame length in samples; the lab page lets the operator try the alternatives. */
 export const FRAME_SIZE = 2048;
-/** Frames quieter than this (RMS, dBFS) are silence: no detector is consulted. */
-export const SILENCE_DB = -50;
+/**
+ * Frames quieter than this (RMS, dBFS) are silence: no detector is consulted. With the
+ * phone's automatic gain off, quiet singing at arm's length sits around −55; −50 cut it.
+ */
+export const SILENCE_DB = -60;
 /** Estimates less clear than this are discarded. */
 export const CLARITY_THRESHOLD = 0.9;
 

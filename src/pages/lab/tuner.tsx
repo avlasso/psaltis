@@ -84,6 +84,7 @@ export function LabTuner() {
   const [error, setError] = useState<string | null>(null);
   const [frameSize, setFrameSize] = useState(FRAME_SIZE);
   const [threshold, setThreshold] = useState(CLARITY_THRESHOLD);
+  const [silenceDb, setSilenceDb] = useState(SILENCE_DB);
   const [processing, setProcessing] = useState(false);
   const [referenceHz, setReferenceHz] = useState(DEFAULT_REFERENCE_HZ);
   const [referenceOn, setReferenceOn] = useState(false);
@@ -94,6 +95,8 @@ export function LabTuner() {
   // Live values the rAF loop reads without re-subscribing.
   const thresholdRef = useRef(threshold);
   thresholdRef.current = threshold;
+  const silenceRef = useRef(silenceDb);
+  silenceRef.current = silenceDb;
   const referenceRef = useRef<number | null>(null);
   referenceRef.current = referenceOn ? referenceHz : null;
 
@@ -107,7 +110,7 @@ export function LabTuner() {
 
     const sampleRate = m.context.sampleRate;
     const db = rmsDb(frame.current);
-    const silent = db < SILENCE_DB;
+    const silent = db < silenceRef.current;
     const clarityFloor = thresholdRef.current;
 
     detectors.current.forEach((d, i) => {
@@ -366,6 +369,17 @@ export function LabTuner() {
             onInput={(e) => setThreshold(Number((e.currentTarget as HTMLInputElement).value))}
           />
         </label>
+        <label class="lab__field lab__field--wide">
+          Level ≥ {silenceDb} dBFS
+          <input
+            type="range"
+            min="-80"
+            max="-30"
+            step="1"
+            value={silenceDb}
+            onInput={(e) => setSilenceDb(Number((e.currentTarget as HTMLInputElement).value))}
+          />
+        </label>
         <label class="lab__field">
           <input type="checkbox" checked={processing} onChange={(e) => changeProcessing((e.currentTarget as HTMLInputElement).checked)} />
           phone voice processing
@@ -377,7 +391,16 @@ export function LabTuner() {
 
       <dl class="lab__stats lab__system">
         <dt>level</dt>
-        <dd>{Number.isFinite(level) ? `${level.toFixed(0)} dBFS` : '—'} (gate {SILENCE_DB})</dd>
+        <dd>
+          <span class="lab__meter" aria-hidden="true">
+            <span
+              class={`lab__meter-fill${Number.isFinite(level) && level >= silenceDb ? ' lab__meter-fill--open' : ''}`}
+              style={{ width: `${Math.max(0, Math.min(100, ((Math.max(level, -80) + 80) / 80) * 100))}%` }}
+            />
+            <span class="lab__meter-gate" style={{ left: `${((silenceDb + 80) / 80) * 100}%` }} />
+          </span>
+          {Number.isFinite(level) ? `${level.toFixed(0)} dBFS` : '—'}
+        </dd>
         <dt>updates</dt>
         <dd>{running ? `${rate}/s (target ${UPDATES_PER_SECOND})` : '—'}</dd>
         <dt>sample rate</dt>
@@ -395,7 +418,10 @@ export function LabTuner() {
       <section class="lab__how">
         <h2>What to do</h2>
         <ol>
-          <li>Start the mic; allow the permission. In silence every card should read — (gated).</li>
+          <li>
+            Start the mic; allow the permission. In silence every card should read — (gated). The level bar
+            shows how loud you are against the gate; if quiet singing drops out, slide the gate left.
+          </li>
           <li>
             Reference tone: play it, hold the phone a hand away from its own speaker. Each card should read the
             Hz in the box, ±1.
