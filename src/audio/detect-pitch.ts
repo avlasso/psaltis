@@ -2,8 +2,10 @@
  * The app's one pitch detector. Item 05 (tune) and everything after call `detectPitch`
  * and never a candidate directly, so the choice lives here and nowhere else.
  *
- * Which candidate this wraps is decided in `docs/decisions/pitch-detector.md` by singing
- * into the phone on `/lab/tuner`. Until that doc exists the choice below is provisional.
+ * McLeod via pitchy, frame 2048, gate −60 dBFS, clarity ≥ 0.9: decided on 2026-09-20 by
+ * singing into the phone on `/lab/tuner` and by the synthetic bench in
+ * `detectors/bench.test.ts`; the reasons and the numbers are in
+ * `docs/decisions/pitch-detector.md`. Change them there first.
  */
 import { type Detector, McLeod } from './detectors';
 
@@ -37,14 +39,14 @@ export function rmsDb(frame: Float32Array): number {
   return rms === 0 ? -Infinity : 20 * Math.log10(rms);
 }
 
-const provisional: Detector = new McLeod();
+const chosen: Detector = new McLeod();
 
 /**
  * One frame in, one pitch or `null` out. No smoothing and no memory between frames: a
  * `null` means this frame had no pitch worth showing, and the caller decides what to draw.
  */
 export function detectPitch(frame: Float32Array, sampleRate: number, options: DetectOptions = {}): Pitch | null {
-  const { detector = provisional, silenceDb = SILENCE_DB, clarityThreshold = CLARITY_THRESHOLD } = options;
+  const { detector = chosen, silenceDb = SILENCE_DB, clarityThreshold = CLARITY_THRESHOLD } = options;
   if (rmsDb(frame) < silenceDb) return null;
   const { hz, clarity } = detector.detect(frame, sampleRate);
   if (hz <= 0 || clarity < clarityThreshold) return null;

@@ -69,7 +69,8 @@ No backend, no accounts, no analytics, no paid services. Progress will live in t
 microphone and shows Hz, clarity, one-second jitter and octave flips for each, plus a reference
 tone from the synth. It chose the detector behind `src/audio/detect-pitch.ts`
 (`docs/decisions/pitch-detector.md`) and stays as the place to look when the tuner misbehaves.
-The mic needs HTTPS, so use the Pages URL or `localhost`.
+The mic needs HTTPS, so use the Pages URL or `localhost`. The synthetic half of that decision
+reruns with `BENCH=1 npx vitest run src/audio/detectors/bench.test.ts`.
 
 ## Known limitations
 

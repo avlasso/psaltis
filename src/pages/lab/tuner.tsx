@@ -17,6 +17,7 @@ const FRAME_SIZES = [1024, 2048, 4096];
 const UPDATES_PER_SECOND = 30;
 const TRACE_SECONDS = 6;
 const JITTER_WINDOW_MS = 1000;
+const FLIP_RETURN_MS = 500;
 const TRACE_MIN_HZ = 70;
 const TRACE_MAX_HZ = 1200;
 const COLOURS = ['#c0392b', '#2471a3', '#1e8449'];
@@ -37,7 +38,9 @@ interface Stats {
   offCents: number | null;
   /** Standard deviation in cents over the last second of accepted frames. */
   jitter: number | null;
+  /** Octave-sized jumps that came back within half a second: errors, not leaps. */
   octaveFlips: number;
+  pendingJump: { t: number; up: boolean } | null;
   lastMs: number;
   maxMs: number;
   recent: Sample[];
@@ -52,6 +55,7 @@ function freshStats(): Stats {
     offCents: null,
     jitter: null,
     octaveFlips: 0,
+    pendingJump: null,
     lastMs: 0,
     maxMs: 0,
     recent: [],
@@ -129,10 +133,21 @@ export function LabTuner() {
         const offCents = cents - Math.round(cents / 100) * 100;
         s.offCents = offCents;
         const previous = s.recent[s.recent.length - 1];
-        if (previous && now - previous.t < 500) {
-          const jump = Math.abs(cents - previous.cents);
-          // A jump within a semitone of an octave (or two) is an octave error, not a leap.
-          if (Math.abs(jump - 1200) < 100 || Math.abs(jump - 2400) < 100) s.octaveFlips++;
+        if (s.pendingJump && now - s.pendingJump.t > FLIP_RETURN_MS) s.pendingJump = null;
+        if (previous && now - previous.t < FLIP_RETURN_MS) {
+          const jump = cents - previous.cents;
+          const size = Math.abs(jump);
+          // An octave-sized jump (or two octaves) that comes straight back is a detector
+          // error; one that stays is the singer leaping, and is not counted.
+          if (Math.abs(size - 1200) < 100 || Math.abs(size - 2400) < 100) {
+            const up = jump > 0;
+            if (s.pendingJump && s.pendingJump.up !== up) {
+              s.octaveFlips++;
+              s.pendingJump = null;
+            } else {
+              s.pendingJump = { t: now, up };
+            }
+          }
         }
         s.recent.push({ t: now, cents });
         s.trace.push({ t: now, cents });
@@ -430,8 +445,9 @@ export function LabTuner() {
             Sing a comfortable note on <i>ah</i> for five seconds. Watch <b>jitter</b>: ±5¢ or better is the target.
           </li>
           <li>
-            Slide slowly up an octave and down. The trace should be one continuous line per colour; a dot that
-            jumps to a parallel line is an octave flip, and the counter says how many.
+            Slide slowly up an octave and down. The trace should be one continuous line per colour. A brief
+            excursion to a parallel line that comes straight back is an octave flip, and the counter says how
+            many; a leap you sang on purpose stays there and is not counted.
           </li>
           <li>Try the same at frame 1024 and 4096; try a hum with the mouth closed; try a low note.</li>
         </ol>
