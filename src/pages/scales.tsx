@@ -21,23 +21,31 @@ export function Scales() {
       <p class="lede">The eight modes, in the order to learn them.</p>
 
       <ol class="modes">
-        {MODES.map((mode) => (
-          <li key={mode.id} class={`mode${mode.partial ? ' mode--soon' : ''}`}>
-            {mode.partial ? (
+        {MODES.map((mode) => {
+          const body = (
+            <>
               <span class="mode__short">{mode.short}</span>
-            ) : (
-              <a class="mode__short" href={href(`/scales/${mode.id}`)}>
-                {mode.short}
-              </a>
-            )}
-            <span class="mode__name">
-              {mode.nameEn} <span class="mode__gr">{mode.nameGr}</span>
-            </span>
-            <span class="mode__genus">{GENUS_LABEL[mode.genus]}</span>
-            {mode.beginner && <span class="badge">Beginner</span>}
-            {mode.partial && <span class="mode__soon">not yet</span>}
-          </li>
-        ))}
+              <span class="mode__name">
+                {mode.nameEn} <span class="mode__gr">{mode.nameGr}</span>
+              </span>
+              <span class="mode__genus">{GENUS_LABEL[mode.genus]}</span>
+              {mode.beginner && <span class="badge">Beginner</span>}
+              {mode.partial && <span class="mode__soon">not yet</span>}
+            </>
+          );
+          // The whole card is the link, not just the number: a thumb lands anywhere on it.
+          return (
+            <li key={mode.id}>
+              {mode.partial ? (
+                <div class="mode mode--soon">{body}</div>
+              ) : (
+                <a class="mode" href={href(`/scales/${mode.id}`)}>
+                  {body}
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </main>
   );

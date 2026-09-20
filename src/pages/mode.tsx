@@ -77,10 +77,12 @@ function ModeLadder({ mode, intervals, back }: { mode: Mode; intervals: number[]
 
   function play() {
     stop();
-    const hzs = upAndDown(intervals.length + 1).map((step) => frequencyOf(step, base.hz, intervals));
+    const steps = upAndDown(intervals.length + 1);
+    const hzs = steps.map((step) => frequencyOf(step, base.hz, intervals));
     setPlaying(true);
+    // The callback indexes the sequence; the ladder wants the step, which repeats on the way down.
     playback.current = getSynth().playSequence(hzs, NOTE_SECONDS, (i) => {
-      setActiveStep(i);
+      setActiveStep(i === null ? null : steps[i]);
       if (i === null) setPlaying(false);
     });
   }

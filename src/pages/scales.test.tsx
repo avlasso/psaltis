@@ -8,8 +8,9 @@ describe('Scales', () => {
     const shorts = Array.from(document.querySelectorAll('.mode__short')).map((el) => el.textContent);
     expect(shorts).toEqual(['Pl. 4', '1', 'Pl. 1', '4', '2', 'Pl. 2', '3', 'Grave']);
 
-    const links = screen.getAllByRole('link').filter((a) => a.classList.contains('mode__short'));
-    expect(links.map((a) => a.textContent)).toEqual(['Pl. 4']);
+    const links = screen.getAllByRole('link').filter((a) => a.classList.contains('mode'));
+    expect(links).toHaveLength(1);
+    expect(links[0].textContent).toContain('Plagal Fourth Mode');
     expect(links[0].getAttribute('href')).toBe('/psaltis/scales/pl4');
     expect(screen.getByText('Beginner')).toBeDefined();
     expect(screen.getAllByText('not yet')).toHaveLength(7);
