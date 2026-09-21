@@ -1,14 +1,19 @@
 # Third-party notices
 
-Ten skills in this directory are copied from
-[mattpocock/skills](https://github.com/mattpocock/skills) at commit
+Fifteen skills in this directory derive from
+[mattpocock/skills](https://github.com/mattpocock/skills). Ten were copied at commit
 `068b6e0c62393147daf03530149cdce209c93da8`: `grilling`, `grill-me`, `handoff`,
 `writing-for-agents`, `grill-with-docs`, `domain-modeling`, `codebase-design`, `tdd`,
-`diagnosing-bugs`, and `resolving-merge-conflicts`.
+`diagnosing-bugs`, and `resolving-merge-conflicts`. Five more — `research`, `triage`,
+`prototype`, `wizard`, `wayfinder` — and `handoff/PHASE-BOUNDARIES.md` were copied at commit
+`84fdeff` via the operator's orthodox-business-hub vendoring.
 
-Two carry local modifications: `resolving-merge-conflicts` hands consequential resolutions to the
-operator rather than committing unconditionally, and `tdd` points at Claude Code's native
-`/code-review` for the review stage.
+Local modifications: `grilling` asks one question per round; `domain-modeling` records living
+decision documents instead of ADRs; `resolving-merge-conflicts` hands consequential resolutions
+to the operator rather than committing unconditionally; `tdd` points at Claude Code's native
+`/code-review` for the review stage; `research` and `wayfinder` keep findings on the working
+branch; `triage` and `wayfinder` carry their GitHub operations inline instead of a setup skill.
+Each adapted skill's commit message records the change.
 
 They are used under the following licence.
 

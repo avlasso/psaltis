@@ -1,32 +1,36 @@
-# ADR Format
+# Living Document Format
 
-ADRs live in `docs/adr/` and use sequential numbering: `0001-slug.md`, `0002-slug.md`, etc.
+Decisions are recorded as **living documents**: one document per topic, with an intentional title, describing the *current* position. When thinking changes, edit the document in place — git history is the archive. Never create a numbered "superseding" record.
 
-Create the `docs/adr/` directory lazily — only when the first ADR is needed.
+They live in `docs/decisions/`, or wherever this repository already keeps them — match the existing convention before inventing one. Create the directory lazily, when the first document is needed.
+
+## Naming
+
+The filename is a kebab-case version of the title, and the title names the topic, not the event: `membership-and-vouching.md`, not `0003-decided-membership-rules.md`. If the subject of a document drifts, retitle it — the title is part of the content.
 
 ## Template
 
 ```md
-# {Short title of the decision}
+# {Intentional title naming the topic}
 
-{1-3 sentences: what's the context, what did we decide, and why.}
+{1-3 sentences: where we currently stand, and why.}
 ```
 
-That's it. An ADR can be a single paragraph. The value is in recording *that* a decision was made and *why* — not in filling out sections.
+That's it. A document can be a single paragraph. The value is recording *where we stand* and *why* — not filling out sections.
 
 ## Optional sections
 
-Only include these when they add genuine value. Most ADRs won't need them.
+Only include these when they add genuine value. Most documents won't need them.
 
-- **Status** frontmatter (`proposed | accepted | deprecated | superseded by ADR-NNNN`) — useful when decisions are revisited
-- **Considered Options** — only when the rejected alternatives are worth remembering
+- **Open questions** — what would change the current position
+- **Considered options** — only when the rejected alternatives are worth remembering (they stop the same suggestion resurfacing in six months)
 - **Consequences** — only when non-obvious downstream effects need to be called out
 
-## Numbering
+## Updating vs. creating
 
-Scan `docs/adr/` for the highest existing number and increment by one.
+Before creating a new document, check whether an existing one already owns the topic — if so, update it in place, retitling if the subject has drifted. A set of living documents stays small and current; a pile of overlapping documents is just ADRs with worse names.
 
-## When to offer an ADR
+## When to offer a document
 
 All three of these must be true:
 
