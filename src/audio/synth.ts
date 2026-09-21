@@ -1,8 +1,9 @@
 /**
  * Plain Web Audio: oscillators and gain envelopes, nothing sampled or hosted. One `Synth`
- * per page; it makes its AudioContext lazily, inside the first user gesture, because iOS
- * refuses to start audio otherwise.
+ * per page, on the page's shared AudioContext (`context.ts`), taken lazily inside the
+ * first user gesture because iOS refuses to start audio otherwise.
  */
+import { sharedContext } from './context';
 
 /** Step indices for playing a scale up and back down without repeating the top. */
 export function upAndDown(stepCount: number): number[] {
@@ -42,13 +43,14 @@ export class Synth {
   private media: HTMLAudioElement | null = null;
 
   private context(): AudioContext {
-    if (!this.ctx) {
-      const Ctor = window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-      this.ctx = new Ctor();
+    const ctx = sharedContext();
+    if (ctx !== this.ctx) {
+      // First use, or the shared context was replaced: any old ison died with it.
+      this.ctx = ctx;
+      this.ison = null;
       this.wakeMedia();
     }
-    if (this.ctx.state !== 'running') void this.ctx.resume();
-    return this.ctx;
+    return ctx;
   }
 
   private wakeMedia(): void {

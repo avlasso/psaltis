@@ -3,15 +3,22 @@ import type { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { type Playback, Synth, upAndDown } from '../audio/synth';
 import { Ladder } from '../components/ladder';
+import { Needle, type NeedleReading, Tuner } from '../components/tuner';
 import { type Mode, modeById } from '../theory/modes';
 import { frequencyOf } from '../theory/moria';
+import type { TunerTarget } from '../theory/tuning';
 import { baseNote, clampBase, DEFAULT_BASE_MIDI } from '../theory/pitch';
 import { href } from '../routes';
 import { NotFound } from './not-found';
 
 const NOTE_SECONDS = 0.6;
 
-/** `/scales/:id` — a mode's ladder with *play* and the ison. */
+/** `?debug` shows the tuner's raw numbers (Hz, cents, clarity, rate, audio arrangement). */
+function debugWanted(): boolean {
+  return typeof location !== 'undefined' && new URLSearchParams(location.search).has('debug');
+}
+
+/** `/scales/:id` — a mode's ladder with *play*, the ison and *tune*. */
 export function ModePage({ id }: { id?: string }) {
   const mode = id ? modeById(id) : undefined;
   if (!mode) return <NotFound />;
@@ -45,7 +52,10 @@ function ModeLadder({ mode, intervals, back }: { mode: Mode; intervals: number[]
   const [isonOn, setIsonOn] = useState(false);
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
+  const [reading, setReading] = useState<NeedleReading | null>(null);
   const synth = useRef<Synth>();
+  // The tuner keys its fold on this array, so it must be the mode's own, not a copy per render.
+  const target: TunerTarget = { kind: 'scale', intervals };
   const playback = useRef<Playback | null>(null);
   const base = baseNote(baseMidi);
 
@@ -122,15 +132,23 @@ function ModeLadder({ mode, intervals, back }: { mode: Mode; intervals: number[]
         </button>
       </div>
 
+      <Tuner target={target} baseHz={base.hz} onReading={setReading} debug={debugWanted()} />
+
       <Ladder
         intervals={intervals}
         base={base}
         onBaseChange={(midi) => setBaseMidi(clampBase(midi))}
         activeStep={activeStep}
+        nearStep={reading?.step ?? null}
         onStepTap={tapStep}
-      />
+      >
+        <Needle reading={reading} />
+      </Ladder>
 
-      <p class="hint-text">Tap a step to hear it. Moria between steps; the base moves, the moria stay.</p>
+      <p class="hint-text">
+        Tap a step to hear it. Moria between steps; the base moves, the moria stay. <i>Tune</i> draws your
+        voice on the rail against the nearest step.
+      </p>
 
       <section class="sources" aria-label="Sources">
         <h2>Intervals from</h2>

@@ -8,7 +8,9 @@ import { type BaseNote, BASE_MAX_MIDI, BASE_MIN_MIDI } from '../theory/pitch';
  * Where each step sits on the ladder, as a fraction of its height from the bottom
  * (0 = base, 1 = octave). The rungs are spaced by moria, so the 8-moria Βου–Γα gap is
  * visibly narrower than the 12-moria Νη–Πα gap. The tuner (item 05) draws its needle
- * with the same function, so a pitch of *m* moria above the base lands at `m / 72`.
+ * with the same function, so a pitch of *m* moria above the base lands at `m / 72` —
+ * a little below the rail when the voice is flat of Νη, which is why the rail has an
+ * unmarked margin past each end rung (`.ladder__rail::before/::after`).
  */
 export function stepPositions(intervals: readonly number[]): number[] {
   return cumulativeMoria(intervals).map((m) => m / MORIA_PER_OCTAVE);
@@ -20,12 +22,14 @@ export interface LadderProps {
   onBaseChange: (midi: number) => void;
   /** Index of the step currently sounding, if any. */
   activeStep?: number | null;
+  /** Index of the step nearest the sung pitch (the tuner's reading), if any. */
+  nearStep?: number | null;
   onStepTap?: (index: number) => void;
-  /** Overlays drawn on the rail (the tuner needle, later). Positioned by `stepPositions`. */
+  /** Overlays drawn on the rail (the tuner's `Needle`). Positioned by `stepPositions`. */
   children?: ComponentChildren;
 }
 
-export function Ladder({ intervals, base, onBaseChange, activeStep = null, onStepTap, children }: LadderProps) {
+export function Ladder({ intervals, base, onBaseChange, activeStep = null, nearStep = null, onStepTap, children }: LadderProps) {
   const positions = stepPositions(intervals);
   const octaveHint = base.hint.replace(/\d+$/, (d) => String(Number(d) + 1));
 
@@ -72,7 +76,7 @@ export function Ladder({ intervals, base, onBaseChange, activeStep = null, onSte
               key={`s${i}`}
               id={`step-${i}`}
               data-step={i}
-              class={`ladder__step${activeStep === i ? ' ladder__step--active' : ''}`}
+              class={`ladder__step${activeStep === i ? ' ladder__step--active' : ''}${nearStep === i ? ' ladder__step--near' : ''}`}
               style={{ bottom: `${pos * 100}%` }}
               onClick={() => onStepTap?.(i)}
             >

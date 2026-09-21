@@ -312,10 +312,34 @@ a.mode:focus-visible {
 }
 
 .ladder__rail {
+  --rail-height: 26rem;
+  /* Unmarked room past each end rung: the needle sits here when flat of Νη (6 moria). */
+  --rail-margin: calc(var(--rail-height) * 6 / 72);
   position: relative;
-  height: 26rem;
-  margin: 1rem 0 1rem 3.25rem;
+  height: var(--rail-height);
+  margin: calc(var(--rail-margin) + 0.5rem) 0 calc(var(--rail-margin) + 0.5rem) 3.25rem;
   border-left: 2px solid var(--tile-border);
+}
+
+.ladder__rail::before,
+.ladder__rail::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  width: 2px;
+  height: var(--rail-margin);
+  background: linear-gradient(to top, var(--tile-border), transparent);
+  pointer-events: none;
+}
+
+.ladder__rail::before {
+  bottom: 100%;
+  background: linear-gradient(to top, var(--tile-border), transparent);
+}
+
+.ladder__rail::after {
+  top: 100%;
+  background: linear-gradient(to bottom, var(--tile-border), transparent);
 }
 
 .ladder__moria {
@@ -360,6 +384,108 @@ a.mode:focus-visible {
 .ladder__step--active .ladder__rung {
   background: var(--accent);
   height: 3px;
+}
+
+/* The step nearest the sung pitch: distinct from play's accent so both can show at once. */
+.ladder__step--near .ladder__name {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.ladder__step--near .ladder__rung {
+  height: 3px;
+  background: var(--fg);
+}
+
+/* The tuner's needle: a marker across the rail at the sung pitch, moved by `bottom`. */
+.ladder__needle {
+  position: absolute;
+  left: -0.6rem;
+  width: 2.7rem;
+  height: 3px;
+  margin-bottom: -1.5px;
+  background: #b5341c;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--bg);
+  transition: bottom 60ms linear;
+  pointer-events: none;
+}
+
+.ladder__needle::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.35rem solid transparent;
+  border-left: 0.5rem solid #b5341c;
+  border-right: 0;
+}
+
+.ladder__needle--stale {
+  opacity: 0.35;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ladder__needle,
+  .ladder__needle::before {
+    background-color: #e0553a;
+    border-left-color: #e0553a;
+  }
+}
+
+/* Tuner: the Tune toggle beside its readout, a legend beneath. */
+.tuner {
+  margin: -0.5rem 0 0.5rem;
+}
+
+.tuner__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.tuner__readout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-height: 2.4rem;
+}
+
+.tuner__readout--idle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.tuner__readout--stale {
+  opacity: 0.45;
+}
+
+.tuner__offset {
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+
+.tuner__legend {
+  margin: 0.4rem 0 0;
+}
+
+.tuner__error {
+  color: #b5341c;
+  font-size: 0.9rem;
+}
+
+.tuner__debug {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0;
 }
 
 .hint-text {

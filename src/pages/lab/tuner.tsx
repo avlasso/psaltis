@@ -221,8 +221,10 @@ export function LabTuner() {
   async function start(withProcessing = processing) {
     setError(null);
     try {
-      // openMic makes its AudioContext synchronously, inside this tap.
-      const m = await openMic(frameSize, { processing: withProcessing });
+      // openMic takes its AudioContext synchronously, inside this tap. The lab keeps the mic on
+      // a context of its own, apart from the reference tone's: the two-context arm of the A/B
+      // in docs/decisions/tuner.md (the mode page is the one-context arm).
+      const m = await openMic(frameSize, { processing: withProcessing, ownContext: true });
       mic.current?.close();
       mic.current = m;
       frame.current = new Float32Array(frameSize);
