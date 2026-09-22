@@ -204,22 +204,22 @@ def test_write_hymn_keeps_operator_fields(hymns, tmp_path):
     rec = json.loads(p.read_text(encoding="utf-8"))
     assert rec["id"] == "oc.m7.d1.ocVE.Apolytikion"
     assert rec["title_gr"] == "Κατέλυσας τῷ Σταυρῷ σου"
-    assert rec["stage"] is None
+    assert "settings" not in rec
     assert rec["icxc"]["mode"] == 7
     assert rec["icxc"]["page"] == "/2026/09/19/vespers/"
     assert rec["icxc"]["scores"][0]["label"]
 
-    rec["stage"] = 1
+    rec["slug"] = "you-descended"
     rec["title_gr"] = "Κατέλυσας"
-    rec["phrases"] = [{"t": 3.2}]
+    rec["settings"] = [{"id": "gr-grave", "language": "gr", "mode": "grave"}]
     rec["rundown_note"] = "kept"
     p.write_text(json.dumps(rec, ensure_ascii=False), encoding="utf-8")
 
     ingest.write_hymn(hymns[0], "/2026/10/03/vespers/", catalogue_dir=tmp_path)
     rec2 = json.loads(p.read_text(encoding="utf-8"))
-    assert rec2["stage"] == 1
+    assert rec2["slug"] == "you-descended"
     assert rec2["title_gr"] == "Κατέλυσας"
-    assert rec2["phrases"] == [{"t": 3.2}]
+    assert rec2["settings"] == [{"id": "gr-grave", "language": "gr", "mode": "grave"}]
     assert rec2["rundown_note"] == "kept"
     assert rec2["icxc"]["page"] == "/2026/10/03/vespers/"
 

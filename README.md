@@ -12,7 +12,8 @@ Live: <https://avlasso.github.io/psaltis/>
 ```sh
 npm install
 npm run dev        # http://localhost:5173/psaltis/
-npm test           # vitest, once
+npm test           # vitest, once (includes the content check)
+npm run check:content  # just the content check over catalogue/hymns/
 npm run build      # type-check, then build to dist/
 npm run preview    # serve dist/ the way Pages would (mostly — see Deployment)
 ```
@@ -85,7 +86,8 @@ reruns with `BENCH=1 npx vitest run src/audio/detectors/bench.test.ts`.
   with the text each claim is cited to; `pitch.ts`: the movable base note). `audio/` is the
   Web Audio synth, the microphone (`mic.ts`) and pitch detection (`detect-pitch.ts` is the one
   the app calls; `detectors/` holds the candidates the lab compares); `components/ladder.tsx`
-  is the ladder that *play*, *tune* and practice share.
+  is the ladder that *play*, *tune* and practice share. `content/hymns.ts` reads
+  `catalogue/hymns/*.json` at build time and holds the content check the Library relies on.
 - `catalogue/` — content (hymns, modes, rundowns); see [`catalogue/README.md`](catalogue/README.md).
   Adding a hymn or swapping a video is a file edit here; no code changes for content.
 - `psaltis/`, `tests/`, `pyproject.toml` — the Python content tools, below. Nothing in the app

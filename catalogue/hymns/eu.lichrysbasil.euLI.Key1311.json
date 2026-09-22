@@ -3,10 +3,46 @@
   "kind": "hymn",
   "title_gr": "Ἅγιος, ἅγιος, ἅγιος, Κύριος",
   "title_en": "Holy, holy, holy, Lord",
-  "stage": null,
-  "melodic_speed": null,
+  "slug": "holy-holy-holy",
   "transliteration": null,
-  "phrases": [],
+  "settings": [
+    {
+      "id": "gr-pl4",
+      "language": "gr",
+      "mode": "pl4",
+      "label": "Λειτουργικά of Konstantinos Pringos, Pl. 4 — the Patriarchal setting",
+      "score": null,
+      "recordings": [
+        {
+          "youtube": "lKMKyT8ItOc",
+          "singer": "Thrasyvoulos Stanitsas",
+          "label": "Pringos's Pl. 4 Liturgika, complete; St Demetrios, Ampelokipoi, 21 Dec 1969 — needs a start time"
+        },
+        {
+          "youtube": "v5-6-viKfpg",
+          "singer": "Hieromonk Romanos (Anastasiadis)",
+          "label": "Pringos's Pl. 4 Liturgika, complete; Prophet Elias monastery, Roustika — needs a start time"
+        },
+        {
+          "youtube": "Lansp2heYCs",
+          "singer": "Dimitrios Matziris",
+          "label": "Holy Holy Holy alone, Pl. 4, 2022 — composition not stated"
+        }
+      ],
+      "about": "Sung at the Anaphora. The priest says “Let us lift up our hearts” and “Let us give thanks to the Lord”, then “Singing the triumphal hymn, shouting, proclaiming and saying” — and the choir answers with this. Pl. 4 Liturgika are the everyday Sunday set in Greek parishes; this melody is Konstantinos Pringos's, as sung at the Patriarchate.",
+      "byz": null
+    },
+    {
+      "id": "en-pl4-simple",
+      "language": "en",
+      "mode": "pl4",
+      "label": "Pl. 4, simple — Stanley Dedes's English setting (GOA)",
+      "score": "media/m/dedes/en/eu/lichrysbasil/w/liturgicmode8_simple.pdf",
+      "recordings": [],
+      "about": "The same moment of the Anaphora, in English. A short syllabic setting in Pl. 4 on the same ladder as the Greek, in Western notation. No recording chosen yet.",
+      "byz": null
+    }
+  ],
   "icxc": {
     "icxc_key": "eu.lichrysbasil_gr_US_goa|euLI.Key1311.text",
     "text_gr": "Ἅγιος, ἅγιος, ἅγιος, Κύριος Σαβαώθ· πλήρης ὁ οὐρανὸς καὶ ἡ γῆ τῆς δόξης σου. Ὡσαννά, ἐν τοῖς ὑψίστοις· εὐλογημένος ὁ ἐρχόμενος ἐν ὀνόματι Κυρίου. Ὡσαννά, ὁ ἐν τοῖς ὑψίστοις.",

@@ -436,12 +436,12 @@ def write_hymn(parsed: ParsedHymn, page: str, *, catalogue_dir: Path | None = No
         "kind": "hymn",
         "title_gr": existing.get("title_gr") or incipit(parsed.text_gr),
         "title_en": existing.get("title_en") or incipit(parsed.text_en),
-        "stage": existing.get("stage"),
-        "melodic_speed": existing.get("melodic_speed"),
         "transliteration": existing.get("transliteration"),
-        "phrases": existing.get("phrases", []),
         "icxc": icxc,
     }
+    # Every other top-level field is the operator's — `slug` and `settings` above all
+    # (catalogue/README.md) — and comes across untouched. A fresh file gets no `settings`
+    # key, so the app does not list it until the operator writes one.
     for k, v in existing.items():
         record.setdefault(k, v)
     path.parent.mkdir(parents=True, exist_ok=True)

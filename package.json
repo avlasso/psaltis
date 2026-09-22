@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:content": "vitest run src/content"
   },
   "dependencies": {
     "lucide-preact": "^1.47.0",

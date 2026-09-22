@@ -87,11 +87,13 @@ mic's rate disagreed, which would kill the ison mid-drone.
   passes `ownContext: true` and is the two-context arm (reference tone + mic). Compare on the
   phone; switching the default is one line in `openMic`.
 
-### Pending: the phone's verdict
+### The phone's verdict (2026-09-22)
 
-Not yet observed by the operator. When it is, record here: which arm kept the ison clean when
-the mic opened; whether the earpiece routing and volume drop differed; whether the mismatch
-fallback was ever taken (the debug line).
+The one-context arm holds: on the mode page the ison stayed clean when the mic opened. The
+tuner itself was judged effective by a chanter better than the operator, singing against the
+ladder. The shared context stays the default. Not recorded: whether the mismatch fallback was
+ever taken (the `?debug` line was not read), and whether the earpiece routing differed from the
+two-context lab arm — neither mattered in use, so neither is chased.
 
 ## Tap-to-resume
 

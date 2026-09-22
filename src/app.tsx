@@ -1,6 +1,7 @@
 import { LocationProvider, Route, Router } from 'preact-iso';
 import { BASE } from './routes';
 import { Home } from './pages/home';
+import { HymnPage } from './pages/hymn';
 import { LabTuner } from './pages/lab/tuner';
 import { Library } from './pages/library';
 import { NotFound } from './pages/not-found';
@@ -16,6 +17,7 @@ function Pages() {
       <Route path="/scales" component={Scales} />
       <Route path="/scales/:id" component={ModePage} />
       <Route path="/library" component={Library} />
+      <Route path="/library/:slug" component={HymnPage} />
       <Route path="/start" component={Start} />
       {/* Not linked from Home: the bench for the pitch detector (docs/work-items/03). */}
       <Route path="/lab/tuner" component={LabTuner} />
