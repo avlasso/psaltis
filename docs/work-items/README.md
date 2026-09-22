@@ -88,4 +88,7 @@ first slice teaches. Itemise them after the slice is on the phone.
   marks one recording per setting as primary in the content format. Still open: what "adjust"
   is — a single speed factor over the whole hymn, or a per-phrase pace — and whether the
   practice view plays the recording (muted, as the clock) or only runs its timeline. The
-  green/red indicator is the last piece, not the first.
+  score is entered in **Neanes** (the external editor; the destination's `.byz` choice), not
+  in an editor of our own: the app reads the `.byz`, walks the neumes into a note sequence
+  (the parser is ours), renders the score beside the ladder, and follows it — a side-by-side
+  view, toggleable. The green/red indicator is the last piece, not the first.
