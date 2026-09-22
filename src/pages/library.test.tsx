@@ -44,6 +44,15 @@ describe('Library', () => {
     expect(screen.getAllByRole('heading', { level: 3, name: 'About' }).length).toBeGreaterThan(0);
   });
 
+  it('tags Holy Holy Holy as Beginner in the list and on its page', async () => {
+    render(<Library />);
+    expect(screen.getByText('Beginner')).toBeDefined();
+
+    renderAt('/psaltis/library/holy-holy-holy');
+    await waitFor(() => expect(screen.getByRole('heading', { level: 1, name: 'Holy, holy, holy, Lord' })).toBeDefined());
+    expect(screen.getAllByText('Beginner').length).toBeGreaterThan(0);
+  });
+
   it('404s an unknown hymn', async () => {
     renderAt('/psaltis/library/no-such-hymn');
     await waitFor(() => expect(screen.queryByRole('heading', { level: 1, name: 'Holy, holy, holy, Lord' })).toBeNull());

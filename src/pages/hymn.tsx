@@ -1,5 +1,5 @@
 import { ArrowLeft, ExternalLink, Mic } from 'lucide-preact';
-import { type Hymn, hymnBySlug, type Recording, scoreUrl, type Setting, statusOf, youtubeEmbedUrl } from '../content/hymns';
+import { type Hymn, hymnBySlug, LEVEL_LABEL, type Recording, scoreUrl, type Setting, statusOf, youtubeEmbedUrl } from '../content/hymns';
 import { modeById } from '../theory/modes';
 import { href } from '../routes';
 import { NotFound } from './not-found';
@@ -18,6 +18,7 @@ export function HymnPage({ slug }: { slug?: string }) {
       <h1>{hymn.title_en}</h1>
       <p class="lede">
         {hymn.title_gr} · {hymn.icxc.service}
+        {hymn.level && <span class={`tag tag--${hymn.level}`}>{LEVEL_LABEL[hymn.level]}</span>}
       </p>
 
       {hymn.settings.map((s) => (

@@ -65,12 +65,22 @@ export interface IcxcBlock {
   scores: { path: string; notation: string; language: string; source: string; label?: string }[];
 }
 
+/**
+ * Roadmap signposting (item 10): a hymn is tagged *Beginner* or *not for beginners*, or
+ * carries no tag at all. Nothing is gated by it — the tag is a hint on the Library list and
+ * the hymn page. Papadic pieces (Cherubic, Communion) are the `advanced` case.
+ */
+export type Level = 'beginner' | 'advanced';
+export const LEVEL_LABEL: Record<Level, string> = { beginner: 'Beginner', advanced: 'Not for beginners' };
+
 export interface Hymn {
   id: string;
   /** Route segment: `/library/<slug>`. */
   slug: string;
   title_gr: string;
   title_en: string;
+  /** Beginner signposting; absent on a hymn that is neither especially easy nor hard. */
+  level?: Level;
   settings: Setting[];
   icxc: IcxcBlock;
 }
@@ -121,6 +131,10 @@ export function checkHymn(raw: unknown, file = '<hymn>'): CheckResult {
     if (typeof raw.icxc.text_en !== 'string') at('icxc.text_en', 'must be a string');
     if (typeof raw.icxc.service !== 'string') at('icxc.service', 'must be a string');
     if (!Array.isArray(raw.icxc.scores)) at('icxc.scores', 'must be a list');
+  }
+
+  if (raw.level !== undefined && raw.level !== 'beginner' && raw.level !== 'advanced') {
+    at('level', 'must be "beginner", "advanced", or absent');
   }
 
   if (!Array.isArray(raw.settings)) {

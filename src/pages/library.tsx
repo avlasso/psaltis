@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-preact';
 import { useState } from 'preact/hooks';
-import { type Hymn, loadCatalogue, STATUSES, type Status, statusOf } from '../content/hymns';
+import { type Hymn, LEVEL_LABEL, loadCatalogue, STATUSES, type Status, statusOf } from '../content/hymns';
 import { MODES, modeById } from '../theory/modes';
 import { href } from '../routes';
 
@@ -99,7 +99,10 @@ function HymnRow({ hymn, status, mode }: { hymn: Hymn; status: Status | typeof A
       <span class="hymn__title">
         {hymn.title_en} <span class="hymn__gr">{hymn.title_gr}</span>
       </span>
-      <span class="hymn__service">{hymn.icxc.service}</span>
+      <span class="hymn__service">
+        {hymn.icxc.service}
+        {hymn.level && <span class={`tag tag--${hymn.level}`}>{LEVEL_LABEL[hymn.level]}</span>}
+      </span>
       <span class="hymn__settings">
         {hymn.settings.map((s) => {
           const dim = (mode !== ALL && s.mode !== mode) || (status !== ALL && statusOf(s) !== status);

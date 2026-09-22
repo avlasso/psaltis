@@ -21,6 +21,14 @@ describe('in-app navigation', () => {
     await waitFor(() => expect(screen.getByRole('button', { name: 'Play' })).toBeDefined());
   });
 
+  it('reaches the Pl. 4 ladder from Home through Where do I start?', async () => {
+    renderAt('/psaltis/');
+    fireEvent.click(screen.getByRole('link', { name: 'Where do I start?' }));
+    await waitFor(() => expect(screen.getByRole('heading', { level: 1, name: 'Where do I start?' })).toBeDefined());
+    fireEvent.click(screen.getByRole('link', { name: 'Scales → Pl. 4' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Play' })).toBeDefined());
+  });
+
   it('reaches Practice from the Pl. 4 page and from a Holy Holy Holy setting', async () => {
     renderAt('/psaltis/scales/pl4');
     fireEvent.click(screen.getByRole('link', { name: 'Practice this' }));

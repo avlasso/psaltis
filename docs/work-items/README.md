@@ -16,7 +16,7 @@ set's only state: mark an item done here when its commit lands, or the set drift
 | 07 | [Tutor panel](07-tutor-panel.md) | 04, 06 | operator accepts each source/note | open |
 | 08 | [Mastery checklist](08-mastery-checklist.md) | 06 | operator edits wording | open |
 | 09 | [*Practice this*](09-practice-this.md) | 05, 06 | — | done 2026-09-22 |
-| 10 | [*Where do I start?*](10-where-do-i-start.md) | 04, 06 | — | open |
+| 10 | [*Where do I start?*](10-where-do-i-start.md) | 04, 06 | — | done 2026-09-22 |
 
 ## Graph
 

@@ -32,6 +32,12 @@ describe('checkHymn', () => {
     expect(checkHymn(good()).ok).toBe(true);
   });
 
+  it('accepts a level tag and rejects an unknown one', () => {
+    expect(checkHymn({ ...good(), level: 'beginner' }).ok).toBe(true);
+    expect(checkHymn({ ...good(), level: 'advanced' }).ok).toBe(true);
+    expect(errorsOf({ ...good(), level: 'hard' })).toEqual(['f.json: level must be "beginner", "advanced", or absent']);
+  });
+
   it('names the offending field', () => {
     const h = good();
     (h.settings as Record<string, unknown>[])[0].recordings = [{ youtube: 'https://youtu.be/lKMKyT8ItOc', singer: 'S' }];

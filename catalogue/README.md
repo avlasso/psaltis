@@ -34,6 +34,7 @@ v1-era apolytikia, the apēchēmata) is not a Library hymn; the app skips it sil
   "title_gr": "Ἅγιος, ἅγιος, ἅγιος, Κύριος",
   "title_en": "Holy, holy, holy, Lord",
   "slug": "holy-holy-holy",                 // the route: /library/holy-holy-holy
+  "level": "beginner",                      // optional: "beginner" | "advanced" | absent
   "transliteration": null,
   "settings": [
     {
@@ -68,6 +69,10 @@ English of one hymn are different settings. To add a setting, copy a block and c
 - `recordings` — YouTube only, one embed each, no autoplay. `singer` is required; `label` tells
   recordings apart; `start` / `end` cut a hymn out of a video that holds the whole set of
   Liturgika. May be empty ("No recording yet").
+- `level` — roadmap signposting (work item 10): `"beginner"` tags a hymn to start with,
+  `"advanced"` shows *Not for beginners* (the Papadic pieces — Cherubic, Communion). Leave
+  it out for everything in between. It is a hint on the Library list and the hymn page;
+  nothing is gated, hidden or reordered by it.
 - `about` — where in the service it is sung and what this setting is. Short and plain. Anything
   historical or narrative belongs to the tutor as a *source* (work item 07), not here.
 
@@ -98,6 +103,12 @@ as a `score`.
 ## Also here
 
 - `modes.json` — the eight modes: names, apēchēma syllables, a one-sentence character.
+- `guide/<name>.md` — the text of a help page, in a small Markdown subset: `#` and `##`
+  headings, paragraphs, `-` and `1.` lists, `**bold**`, `*italic*`, and links written
+  `[text](/scales/pl4)` for a page of the app or `[text](https://…)` for anywhere else.
+  `where-do-i-start.md` is the page behind Home's *Where do I start?*. Editing it is a
+  content edit — no code, no deploy step beyond the push. Nothing else is supported:
+  an unknown marker shows up as written (see `src/content/prose.tsx`).
 - `rundowns/<id>.md` — a pew-length note per hymn, from v1.
 - The v1-era files under `hymns/` still carry `stage`, `melodic_speed`, `phrases`. The app
   ignores them; the ingest no longer writes them. Delete them when you next touch a file.

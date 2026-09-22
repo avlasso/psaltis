@@ -112,6 +112,7 @@ function ModeLadder({ mode, intervals, back }: { mode: Mode; intervals: number[]
       </h1>
       <p class="lede">
         {mode.nameEn} · {mode.genus} · {intervals.join('‑')} = 72 moria
+        {mode.beginner && <span class="tag tag--beginner">Beginner</span>}
       </p>
 
       <div class="controls">

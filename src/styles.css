@@ -843,3 +843,45 @@ a.mode:focus-visible {
   width: 1rem;
   height: 1rem;
 }
+
+/* Roadmap signposting (work item 10): a Beginner / not-for-beginners tag, and the guide page. */
+
+.tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* The harder pieces are marked, not shouted about: quieter than Beginner, never a warning. */
+.tag--advanced {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--tile-border);
+}
+
+.prose h1 {
+  margin-top: 0.5rem;
+}
+
+.prose h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.prose p,
+.prose li {
+  max-width: 38rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
