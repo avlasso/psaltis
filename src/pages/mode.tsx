@@ -1,4 +1,4 @@
-import { ArrowLeft, Play, Square } from 'lucide-preact';
+import { ArrowLeft, Mic, Play, Square } from 'lucide-preact';
 import type { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { type Playback, Synth, upAndDown } from '../audio/synth';
@@ -130,6 +130,10 @@ function ModeLadder({ mode, intervals, back }: { mode: Mode; intervals: number[]
         >
           Ison {isonOn ? 'on' : 'off'}
         </button>
+        <a class="control" href={href(`/scales/${mode.id}/practice`)}>
+          <Mic aria-hidden="true" />
+          Practice this
+        </a>
       </div>
 
       <Tuner target={target} baseHz={base.hz} onReading={setReading} debug={debugWanted()} />

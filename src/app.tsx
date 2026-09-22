@@ -7,6 +7,7 @@ import { Library } from './pages/library';
 import { NotFound } from './pages/not-found';
 import { ModePage } from './pages/mode';
 import { Scales } from './pages/scales';
+import { HymnPractice, ModePractice } from './pages/practice';
 import { Start } from './pages/start';
 
 /** Routes below the base path. Add new pages here. */
@@ -16,8 +17,10 @@ function Pages() {
       <Route path="/" component={Home} />
       <Route path="/scales" component={Scales} />
       <Route path="/scales/:id" component={ModePage} />
+      <Route path="/scales/:id/practice" component={ModePractice} />
       <Route path="/library" component={Library} />
       <Route path="/library/:slug" component={HymnPage} />
+      <Route path="/library/:slug/:setting/practice" component={HymnPractice} />
       <Route path="/start" component={Start} />
       {/* Not linked from Home: the bench for the pitch detector (docs/work-items/03). */}
       <Route path="/lab/tuner" component={LabTuner} />

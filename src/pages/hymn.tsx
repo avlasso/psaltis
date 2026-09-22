@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink } from 'lucide-preact';
+import { ArrowLeft, ExternalLink, Mic } from 'lucide-preact';
 import { type Hymn, hymnBySlug, type Recording, scoreUrl, type Setting, statusOf, youtubeEmbedUrl } from '../content/hymns';
 import { modeById } from '../theory/modes';
 import { href } from '../routes';
@@ -66,6 +66,15 @@ function SettingSection({ hymn, setting }: { hymn: Hymn; setting: Setting }) {
         </p>
       ) : (
         <p class="hint-text">GOA has no score for this setting.</p>
+      )}
+
+      {mode && !mode.partial && (
+        <p>
+          <a class="control" href={href(`/library/${hymn.slug}/${setting.id}/practice`)}>
+            <Mic aria-hidden="true" />
+            Practice this
+          </a>
+        </p>
       )}
     </section>
   );

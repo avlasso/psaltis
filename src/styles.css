@@ -231,6 +231,7 @@ a.mode:focus-visible {
   background: var(--tile);
   color: var(--fg);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .control svg {
@@ -818,4 +819,27 @@ a.mode:focus-visible {
 .score svg {
   width: 1.1em;
   height: 1.1em;
+}
+
+/* Practice view (item 09) */
+
+.practice .setting__text {
+  margin-bottom: 1rem;
+}
+
+.next-step {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.next-step a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--accent);
+}
+
+.next-step svg {
+  width: 1rem;
+  height: 1rem;
 }

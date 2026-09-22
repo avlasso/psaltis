@@ -2,20 +2,21 @@
 
 Decomposed from [`../destination.md`](../destination.md) on 2026-09-20. One file per item; each
 is sized for a fresh context to pick up, do, and verify on its own. Together they deliver the
-destination's **First slice** and meet its **Acceptance** section.
+destination's **First slice** and meet its **Acceptance** section. The *Status* column is the
+set's only state: mark an item done here when its commit lands, or the set drifts from the git log.
 
-| #  | Item | Blocked by | HITL |
-|----|------|-----------|------|
-| 01 | [App scaffold, Home, GitHub Pages deploy](01-scaffold-home-pages.md) | — | enable Pages once |
-| 02 | [Carry over the content layer; ingest Holy Holy Holy](02-content-layer-and-holy-holy-holy-ingest.md) | — | — |
-| 03 | [Pitch-detector spike on a phone mic](03-pitch-detector-spike.md) | 01 | operator sings |
-| 04 | [Scales → Pl. 4: ladder with *play*](04-pl4-ladder-and-play.md) | 01 | — |
-| 05 | [Scales → Pl. 4: *tune*](05-pl4-tune.md) | 03, 04 | operator sings |
-| 06 | [Library: Holy Holy Holy + content format](06-library-holy-holy-holy-and-content-format.md) | 01, 02 | operator picks setting & video |
-| 07 | [Tutor panel](07-tutor-panel.md) | 04, 06 | operator accepts each source/note |
-| 08 | [Mastery checklist](08-mastery-checklist.md) | 06 | operator edits wording |
-| 09 | [*Practice this*](09-practice-this.md) | 05, 06 | — |
-| 10 | [*Where do I start?*](10-where-do-i-start.md) | 04, 06 | — |
+| #  | Item | Blocked by | HITL | Status |
+|----|------|-----------|------|--------|
+| 01 | [App scaffold, Home, GitHub Pages deploy](01-scaffold-home-pages.md) | — | enable Pages once | done 2026-09-20 |
+| 02 | [Carry over the content layer; ingest Holy Holy Holy](02-content-layer-and-holy-holy-holy-ingest.md) | — | — | done 2026-09-20 |
+| 03 | [Pitch-detector spike on a phone mic](03-pitch-detector-spike.md) | 01 | operator sings | done 2026-09-20 |
+| 04 | [Scales → Pl. 4: ladder with *play*](04-pl4-ladder-and-play.md) | 01 | — | done 2026-09-20 |
+| 05 | [Scales → Pl. 4: *tune*](05-pl4-tune.md) | 03, 04 | operator sings | done 2026-09-20 |
+| 06 | [Library: Holy Holy Holy + content format](06-library-holy-holy-holy-and-content-format.md) | 01, 02 | operator picks setting & video | done 2026-09-22 |
+| 07 | [Tutor panel](07-tutor-panel.md) | 04, 06 | operator accepts each source/note | open |
+| 08 | [Mastery checklist](08-mastery-checklist.md) | 06 | operator edits wording | open |
+| 09 | [*Practice this*](09-practice-this.md) | 05, 06 | — | done 2026-09-22 |
+| 10 | [*Where do I start?*](10-where-do-i-start.md) | 04, 06 | — | open |
 
 ## Graph
 
@@ -44,7 +45,7 @@ independent of one another once their blockers land.
 | 3. Which setting of Holy Holy Holy | 06 (operator) |
 | 4. What the *learn* tab holds before `.byz` | **left open** — 06 shows play/about/score only |
 | 5. Mastery checklist wording | 08 |
-| 6. Default Ni frequency / ison on by default | 04 (frequency), 09 (ison default) |
+| 6. Default Ni frequency / ison on by default | 04 (frequency), 09 (ison default: off — [decisions/practice.md](../decisions/practice.md)) |
 | 7. Progress export/import | **left open** — 08 keeps the door open (versioned plain records) |
 | 8. Data format for operator-owned content | 06 |
 | 9. Icon set | 01 |
