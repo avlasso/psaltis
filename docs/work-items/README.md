@@ -74,3 +74,15 @@ first slice teaches. Itemise them after the slice is on the phone.
 - **Interactive `.byz` scores**, **hosted audio**, **record-and-compare** — stated boundaries;
   the hymn schema's `byz: null` slot and the tuner's `NoteSequence` target are the only
   concessions made now.
+- **Practice with feedback against the score** — asked for by the operator on 2026-09-22 after
+  item 09: the practice view of a hymn follows the hymn's own notes in time, highlights the
+  expected step on the ladder (silently) and the corresponding neume on a Byzantine score shown
+  beside it, and shows a plain following indicator — green while the sung step matches the
+  expected one, red while it does not. Feedback, not gamification: no totals, no pass/fail, no
+  record kept. Preconditions, in order: the setting transcribed in Neanes (the operator, per
+  hymn) filling the `byz` slot; a renderer for that notation in the browser; the tuner's
+  `NoteSequence` target implemented. The open design question is **what drives the clock** —
+  a fixed tempo the learner follows, the score advancing when the expected note is heard, or
+  the time-line of a chosen recording — since chant is free-rhythm and the destination's
+  boundary on tuner-judged mastery is about exactly this alignment. Decide that before
+  itemising; the green/red indicator is the last piece, not the first.
