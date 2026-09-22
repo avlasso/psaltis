@@ -92,3 +92,12 @@ first slice teaches. Itemise them after the slice is on the phone.
   in an editor of our own: the app reads the `.byz`, walks the neumes into a note sequence
   (the parser is ours), renders the score beside the ladder, and follows it — a side-by-side
   view, toggleable. The green/red indicator is the last piece, not the first.
+- **AI-assisted transcription from a PDF** — the operator's idea (2026-09-22) for the
+  per-hymn cost above: a vision model reads the neumes off a score page and drafts the `.byz`,
+  which a person corrects in Neanes. Byzantine-neume OMR has no off-the-shelf tool and stacked
+  neumes, fthores and syllable placement make it genuinely hard; a misread step shifts every
+  note after it until the next martyria, so *drafted then corrected* is the realistic shape,
+  not *instant*. Not a prerequisite for anything; a cost-reducer. First experiment before
+  committing to it: one page of the Dedes Pl. 4 PDF through a vision model, count the neumes
+  it gets right. Rights: a `.byz` derived from a GOA PDF carries that PDF's rights; prefer
+  public-domain sources for anything shared.
