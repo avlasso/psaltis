@@ -81,8 +81,11 @@ first slice teaches. Itemise them after the slice is on the phone.
   expected one, red while it does not. Feedback, not gamification: no totals, no pass/fail, no
   record kept. Preconditions, in order: the setting transcribed in Neanes (the operator, per
   hymn) filling the `byz` slot; a renderer for that notation in the browser; the tuner's
-  `NoteSequence` target implemented. The open design question is **what drives the clock** —
-  a fixed tempo the learner follows, the score advancing when the expected note is heard, or
-  the time-line of a chosen recording — since chant is free-rhythm and the destination's
-  boundary on tuner-judged mastery is about exactly this alignment. Decide that before
-  itemising; the green/red indicator is the last piece, not the first.
+  `NoteSequence` target implemented. **The clock (operator, 2026-09-22):** chant has no fixed
+  tempo, so the timing comes by default from the setting's *primary* reference recording —
+  the transcription aligned to that video's timeline — and the learner can then adjust it to
+  their own pace. That makes a per-recording alignment part of the transcription work, and
+  marks one recording per setting as primary in the content format. Still open: what "adjust"
+  is — a single speed factor over the whole hymn, or a per-phrase pace — and whether the
+  practice view plays the recording (muted, as the clock) or only runs its timeline. The
+  green/red indicator is the last piece, not the first.
