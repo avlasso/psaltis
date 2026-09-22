@@ -66,6 +66,10 @@ first slice teaches. Itemise them after the slice is on the phone.
   destination probably lives with it. Asked for by the operator on 2026-09-20; where it lives
   and how entries are keyed is item 07's call or a small item after it.
 - **The *learn* tab** (open decision 4) and **progress export/import** (open decision 7).
+- **A preferences / settings menu** — language (Greek, English), notation, which recordings
+  to show — so a hymn page shows what this learner needs rather than every setting and
+  recording in one column. Asked for by the operator on 2026-09-22 after seeing item 06 on the
+  phone; postponed by the operator until more hymns and settings exist to choose between.
 - **Interactive `.byz` scores**, **hosted audio**, **record-and-compare** — stated boundaries;
   the hymn schema's `byz: null` slot and the tuner's `NoteSequence` target are the only
   concessions made now.
