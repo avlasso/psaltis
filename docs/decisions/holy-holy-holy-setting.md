@@ -39,6 +39,9 @@ wanted; say so and they are a search away).
    change with it.
 4. Tap *Open the PDF on GOA* under the English setting; it should open in the browser.
 
-## Verdict
+## Verdict (operator, 2026-09-22)
 
-Pending the operator.
+Pringos's Pl. 4 Liturgika stands as the Greek setting. Two recordings kept: Stanitsas 1969,
+cut to 1:45.5–2:44 (`start: 105.5`, `end: 164`), and Matziris 2022, which is the hymn alone.
+Hieromonk Romanos dropped. The Matziris composition remains unstated on the page; the operator
+likes it as a second voice.
