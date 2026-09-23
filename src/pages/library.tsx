@@ -1,14 +1,20 @@
 import { ArrowLeft } from 'lucide-preact';
 import { useState } from 'preact/hooks';
-import { type Hymn, LEVEL_LABEL, loadCatalogue, STATUSES, type Status, statusOf } from '../content/hymns';
+import { type Hymn, LEVEL_LABEL, loadCatalogue } from '../content/hymns';
+import { AXES, axisStatus, CHECKLIST, matchesStatus, STATUSES, type Status } from '../content/mastery';
+import { masteryKey, ticksOf, useMastery } from '../progress/store';
 import { MODES, modeById } from '../theory/modes';
 import { href } from '../routes';
 
 const ALL = '';
 
-/** `/library` — every hymn with at least one setting, filterable by mode, service and status. */
+/**
+ * `/library` — every hymn with at least one setting, filterable by mode, service and status.
+ * Status is per mastery axis; the filter keeps a setting when either axis has the chosen status.
+ */
 export function Library() {
   const { hymns, problems } = loadCatalogue();
+  useMastery();
   const [mode, setMode] = useState(ALL);
   const [service, setService] = useState(ALL);
   const [status, setStatus] = useState(ALL);
@@ -19,7 +25,7 @@ export function Library() {
   const shown = hymns.filter(
     (h) =>
       (service === ALL || h.icxc.service === service) &&
-      h.settings.some((s) => (mode === ALL || s.mode === mode) && (status === ALL || statusOf(s) === status)),
+      h.settings.some((s) => (mode === ALL || s.mode === mode) && (status === ALL || matchesStatus(ticksOf(masteryKey(h.id, s.id)), status as Status))),
   );
 
   return (
@@ -105,10 +111,17 @@ function HymnRow({ hymn, status, mode }: { hymn: Hymn; status: Status | typeof A
       </span>
       <span class="hymn__settings">
         {hymn.settings.map((s) => {
-          const dim = (mode !== ALL && s.mode !== mode) || (status !== ALL && statusOf(s) !== status);
+          const ticks = ticksOf(masteryKey(hymn.id, s.id));
+          const dim = (mode !== ALL && s.mode !== mode) || (status !== ALL && !matchesStatus(ticks, status));
           return (
             <span key={s.id} class={`chip${dim ? ' chip--dim' : ''}`}>
-              {s.language.toUpperCase()} · {modeById(s.mode)?.short ?? s.mode} · {statusOf(s)}
+              {s.language.toUpperCase()} · {modeById(s.mode)?.short ?? s.mode}
+              {AXES.map((a) => (
+                <span key={a} class={`chip__axis chip__axis--${axisStatus(ticks, a).replace(' ', '-')}`}>
+                  {' · '}
+                  {CHECKLIST[a].title.toLowerCase()}: {axisStatus(ticks, a)}
+                </span>
+              ))}
             </span>
           );
         })}

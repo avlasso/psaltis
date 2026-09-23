@@ -37,6 +37,8 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     include: ['src/**/*.test.{ts,tsx}'],
+    // jsdom has no IndexedDB; each test file gets a fresh in-memory one (progress, item 08).
+    setupFiles: ['fake-indexeddb/auto'],
     // Vitest ignores `base` for import.meta.env.BASE_URL; tests should see the real one.
     env: { BASE_URL: PAGES_BASE },
   },

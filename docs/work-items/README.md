@@ -14,7 +14,7 @@ set's only state: mark an item done here when its commit lands, or the set drift
 | 05 | [Scales → Pl. 4: *tune*](05-pl4-tune.md) | 03, 04 | operator sings | done 2026-09-20 |
 | 06 | [Library: Holy Holy Holy + content format](06-library-holy-holy-holy-and-content-format.md) | 01, 02 | operator picks setting & video | done 2026-09-22 |
 | 07 | [Tutor panel](07-tutor-panel.md) | 04, 06 | operator accepts each source/note | open |
-| 08 | [Mastery checklist](08-mastery-checklist.md) | 06 | operator edits wording | open |
+| 08 | [Mastery checklist](08-mastery-checklist.md) | 06 | operator edits wording | done 2026-09-22 |
 | 09 | [*Practice this*](09-practice-this.md) | 05, 06 | — | done 2026-09-22 |
 | 10 | [*Where do I start?*](10-where-do-i-start.md) | 04, 06 | — | done 2026-09-22 |
 
@@ -44,7 +44,7 @@ independent of one another once their blockers land.
 | 2. Per-mode interval tables | 04, for Pl. 4 only; each later mode item does its own |
 | 3. Which setting of Holy Holy Holy | 06 (operator) |
 | 4. What the *learn* tab holds before `.byz` | **left open** — 06 shows play/about/score only |
-| 5. Mastery checklist wording | 08 |
+| 5. Mastery checklist wording | 08 — [decisions/mastery.md](../decisions/mastery.md) |
 | 6. Default Ni frequency / ison on by default | 04 (frequency), 09 (ison default: off — [decisions/practice.md](../decisions/practice.md)) |
 | 7. Progress export/import | **left open** — 08 keeps the door open (versioned plain records) |
 | 8. Data format for operator-owned content | 06 |

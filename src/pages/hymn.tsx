@@ -1,10 +1,11 @@
 import { ArrowLeft, ExternalLink, Mic } from 'lucide-preact';
-import { type Hymn, hymnBySlug, LEVEL_LABEL, type Recording, scoreUrl, type Setting, statusOf, youtubeEmbedUrl } from '../content/hymns';
+import { type Hymn, hymnBySlug, LEVEL_LABEL, type Recording, scoreUrl, type Setting, youtubeEmbedUrl } from '../content/hymns';
+import { MasteryChecklists } from '../components/mastery';
 import { modeById } from '../theory/modes';
 import { href } from '../routes';
 import { NotFound } from './not-found';
 
-/** `/library/:slug` — a hymn's settings, each with *play*, *about* and the score. */
+/** `/library/:slug` — a hymn's settings, each with *play*, *about*, the score and mastery. */
 export function HymnPage({ slug }: { slug?: string }) {
   const hymn = slug ? hymnBySlug(slug) : undefined;
   if (!hymn) return <NotFound />;
@@ -40,7 +41,6 @@ function SettingSection({ hymn, setting }: { hymn: Hymn; setting: Setting }) {
         {mode && !mode.partial ? <a href={href(`/scales/${mode.id}`)}>{mode.short}</a> : (mode?.short ?? setting.mode)}
       </h2>
       <p class="setting__label">{setting.label}</p>
-      <p class="setting__status hint-text">{statusOf(setting)}</p>
 
       <p class="setting__text" lang={setting.language === 'gr' ? 'el' : 'en'}>
         {text}
@@ -77,6 +77,9 @@ function SettingSection({ hymn, setting }: { hymn: Hymn; setting: Setting }) {
           </a>
         </p>
       )}
+
+      <h3>Mastery</h3>
+      <MasteryChecklists hymnId={hymn.id} settingId={setting.id} />
     </section>
   );
 }

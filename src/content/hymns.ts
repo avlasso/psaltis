@@ -36,12 +36,12 @@ export interface Recording {
 }
 
 /**
- * One melody of a hymn: a language, a mode, a score, recordings, and later its own mastery
- * state (item 08) and `.byz` transcription. Greek and English are different melodies and so
- * different settings.
+ * One melody of a hymn: a language, a mode, a score, recordings, its own mastery state (kept
+ * in the browser, `src/progress/store.ts`) and later its `.byz` transcription. Greek and
+ * English are different melodies and so different settings.
  */
 export interface Setting {
-  /** Stable within the hymn; mastery keys on `<hymn>/<setting>`. */
+  /** Stable within the hymn; mastery keys on `<hymn id>/<setting id>`, so renaming it drops progress. */
   id: string;
   language: Language;
   /** The scale the tuner takes on the practice view; a `ModeId` from `modes.ts`. */
@@ -83,14 +83,6 @@ export interface Hymn {
   level?: Level;
   settings: Setting[];
   icxc: IcxcBlock;
-}
-
-/** Mastery (item 08) will derive this from stored ticks; until then every setting is not started. */
-export type Status = 'not started' | 'in progress' | 'declared';
-export const STATUSES: readonly Status[] = ['not started', 'in progress', 'declared'];
-
-export function statusOf(_setting: Setting): Status {
-  return 'not started';
 }
 
 export function scoreUrl(path: string): string {
